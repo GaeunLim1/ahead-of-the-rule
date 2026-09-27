@@ -5,7 +5,5 @@
 # its own and cannot read _data/. Change both together.
 name: Gaeun Lim
 links:
-  - label: SSRN
-    url: https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=12094108
   - label: LinkedIn
     url: https://www.linkedin.com/in/gaeun-lim-0b412a3a7
