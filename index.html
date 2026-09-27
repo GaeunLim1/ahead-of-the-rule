@@ -62,18 +62,18 @@ description: "A framework for reading export-control and national-security rules
       <tbody>
         <tr>
           <td>Attribute-based</td>
-          <td>A continuous value measured on the item itself: content share, ownership percentage, technical lineage.</td>
-          <td>A minimum content threshold by weight or value; 50% ownership; a technology-origin share of a foreign-made product.</td>
+          <td>A continuous value measured on the item itself: content share, technical lineage, an aggregated count.</td>
+          <td>A minimum content threshold by weight or value; a bulk-data threshold measured in persons (e.g. 100+ individuals' genomic records).</td>
         </tr>
         <tr>
           <td>Relational</td>
-          <td>A position in a network: nationality, headquarters location, a contract chain.</td>
-          <td>Headquarters in a restricted jurisdiction; a re-export clause running through a third-country buyer.</td>
+          <td>A position in a network: nationality, headquarters location, a contract chain, a control relationship.</td>
+          <td>Headquarters in a restricted jurisdiction; a re-export clause running through a third-country buyer; corporate affiliation extending to subsidiaries, parents, and successor entities.</td>
         </tr>
         <tr>
           <td>Conduct-based</td>
           <td>A future behavior the text conditions on, not a present property.</td>
-          <td>A disciplinary commitment made as a condition of a suspended denial order.</td>
+          <td>A disciplinary commitment made as a condition of a suspended denial order; a domestic-handling certification submitted as a condition of marketing approval.</td>
         </tr>
       </tbody>
     </table>
@@ -84,7 +84,7 @@ description: "A framework for reading export-control and national-security rules
   <div class="chero__shell">
     <p class="ceyebrow">Stage 2 &middot; Design Layer</p>
     <p class="cbody">Not whether the rule existed before the case. Whether this rulemaking sits inside the agency's authorizing text, or redraws that line, and separately, what fires it.</p>
-    <p class="cbody" style="margin-top:1.4rem;"><b>Axis 1: scope of authority</b></p>
+    <p class="csub">Axis 1: scope of authority</p>
     <table class="cgap">
       <thead><tr><th>Type</th><th>Reading</th></tr></thead>
       <tbody>
@@ -92,7 +92,7 @@ description: "A framework for reading export-control and national-security rules
         <tr><td>Redrawing the line</td><td>The rulemaking extends the agency's own reach: a new jurisdictional or definitional line, not a new number inside an old one.</td></tr>
       </tbody>
     </table>
-    <p class="cbody" style="margin-top:1.4rem;"><b>How the axis 1 reading is made</b></p>
+    <p class="csub">How the axis 1 reading is made</p>
     <table class="cgap">
       <thead><tr><th>Step</th><th>Reading</th></tr></thead>
       <tbody>
@@ -102,7 +102,7 @@ description: "A framework for reading export-control and national-security rules
         <tr><td>Gap</td><td>The mismatch between the first two and the third. No mismatch: within the existing line. A mismatch that pulls in a new class of actor: redrawing the line.</td></tr>
       </tbody>
     </table>
-    <p class="cbody" style="margin-top:1.4rem;"><b>Axis 2: trigger mechanism</b></p>
+    <p class="csub">Axis 2: trigger mechanism</p>
     <table class="cgap">
       <thead><tr><th>Type</th><th>Reading</th></tr></thead>
       <tbody>
@@ -110,7 +110,7 @@ description: "A framework for reading export-control and national-security rules
         <tr><td>Conduct trigger</td><td>Fires on a breach or a failure to perform a condition. Creates a latent interval between the breach and its detection that a numeric trigger cannot produce.</td></tr>
       </tbody>
     </table>
-    <p class="cbody" style="margin-top:1.4rem;"><b>The two axes, crossed</b></p>
+    <p class="csub">The two axes, crossed</p>
     <table class="cgap">
       <thead><tr><th></th><th>Within the existing line</th><th>Redrawing the line</th></tr></thead>
       <tbody>
@@ -125,11 +125,11 @@ description: "A framework for reading export-control and national-security rules
   <div class="chero__shell">
     <p class="ceyebrow">Stage 3 &middot; Cross-Reading</p>
     <p class="cbody">Stage 1 and 2 read a single rule. This stage runs only when more than one rule applies to the same firm, and reads them together rather than side by side.</p>
-    <p class="cbody" style="margin-top:1.4rem;"><b>Object comparison</b></p>
+    <p class="csub">Object comparison</p>
     <p class="cbody">Do the rules target the same kind of fact, or different kinds: a person's identity, a thing's makeup, a conduct condition. The object type predicts which part of the firm can see it first: a person-type object routes to legal and ownership diligence, a thing-type object routes to supply-chain and technical diligence. Different object types mean the two readings sit in different departments by default.</p>
-    <p class="cbody" style="margin-top:1.4rem;"><b>Design comparison</b></p>
+    <p class="csub">Design comparison</p>
     <p class="cbody">Did each rule redraw its line in the same direction, or differently. Two rules can move from territorial reach to a nexus test independently of each other, for unrelated stated reasons, and still end up catching the same third-country firm through separate paths. The comparison is not whether the rules coordinate; usually they do not.</p>
-    <p class="cbody" style="margin-top:1.4rem;"><b>Jurisdiction and licensing authority</b></p>
+    <p class="csub">Jurisdiction and licensing authority</p>
     <table class="cgap">
       <thead><tr><th>Question</th><th>Reading</th></tr></thead>
       <tbody>
@@ -138,6 +138,16 @@ description: "A framework for reading export-control and national-security rules
         <tr><td>Filed where</td><td>Where a license or disclosure under each rule is actually submitted.</td></tr>
         <tr><td>Coordination</td><td>Whether the two regulators coordinate with each other. Usually they do not.</td></tr>
         <tr><td>Cross-read risk</td><td>Where a filing made to satisfy one regulator can read badly to the other.</td></tr>
+      </tbody>
+    </table>
+    <p class="csub">Axis cross-reading</p>
+    <p class="cbody">A separate axis from object, design, and jurisdiction: the regulatory mission each rule serves. A gatekeeping-type rule (export control) and a validation-type rule (approval, certification) can reach the same firm with no shared vocabulary and no institutional reason to coordinate, whether they sit in the same country or different ones.</p>
+    <table class="cgap">
+      <thead><tr><th>Pair</th><th>Reading</th></tr></thead>
+      <tbody>
+        <tr><td>Approval &times; Regulation</td><td>Whether the conduct the export-control axis rewards (avoiding a named counterparty) is compatible with the condition the approval axis requires (e.g. data breadth, site access).</td></tr>
+        <tr><td>Approval &times; Deemed export</td><td>Whether preparing the approval filing itself (facility staffing, technology access) triggers a deemed-export disclosure independent of the filing's outcome.</td></tr>
+        <tr><td>Regulation &times; Deemed export</td><td>Whether the deemed-export exposure runs independent of the firm's designation status under the relational (export-control) axis. Territory and headcount, not corporate lineage, decide it.</td></tr>
       </tbody>
     </table>
   </div>
@@ -156,7 +166,7 @@ description: "A framework for reading export-control and national-security rules
         <tr><td>Prior positioning</td><td>Whether the firm is already acting on the object before any outcome: stockpiling, contract renegotiation, license applications filed and pending.</td></tr>
       </tbody>
     </table>
-    <p class="cbody" style="margin-top:1.4rem;"><b>Scenarios</b></p>
+    <p class="csub">Scenarios</p>
     <p class="cbody">Named by condition, not by type: what the matrix looks like under each branch a rule's own timeline can take. When more than one rule applies, the branches cross.</p>
   </div>
 </section>
