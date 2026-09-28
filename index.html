@@ -20,7 +20,7 @@ description: "A framework for reading export-control and national-security rules
       <div class="cov-mech__item">
         <p class="cov-mech__num">STAGE 01</p>
         <p class="cov-mech__name">Object of the Rule</p>
-        <p class="cov-mech__note">What the text names as its target. Read from the article itself, before anything downstream.</p>
+        <p class="cov-mech__note">What the text names as its target. Read from the article itself, before anything downstream — including whether this one rule already mixes more than one type internally.</p>
         <p class="cov-mech__shape">attribute &middot; relational &middot; conduct</p>
       </div>
       <span class="cov-mech__arrow" aria-hidden="true">&#8594;</span>
@@ -36,7 +36,7 @@ description: "A framework for reading export-control and national-security rules
       <div class="cov-mech__item">
         <p class="cov-mech__num">STAGE 03</p>
         <p class="cov-mech__name">Cross-Reading</p>
-        <p class="cov-mech__note">Runs only when more than one rule reaches the same firm. Reads them together, not side by side.</p>
+        <p class="cov-mech__note">Runs when more than one rule reaches the same firm, or when one rule's own clause calls in a second regime by name. Reads them together, not side by side.</p>
         <p class="cov-mech__shape">object &middot; design &middot; jurisdiction</p>
       </div>
       <span class="cov-mech__arrow" aria-hidden="true">&#8594;</span>
@@ -44,7 +44,7 @@ description: "A framework for reading export-control and national-security rules
       <div class="cov-mech__item cov-mech__item--soft">
         <p class="cov-mech__num">STAGE 04</p>
         <p class="cov-mech__name">Cost Layer</p>
-        <p class="cov-mech__note">A per-firm matrix, filled before the outcome is known. It carries no fixed types: a label here would already be a result.</p>
+        <p class="cov-mech__note">A per-firm matrix, filled before the outcome is known. It carries no fixed types: a label here would already be a result. Includes whether anyone can assemble it.</p>
         <p class="cov-mech__shape">variables &times; scenarios</p>
       </div>
 
@@ -77,6 +77,8 @@ description: "A framework for reading export-control and national-security rules
         </tr>
       </tbody>
     </table>
+    <p class="csub">Mix check</p>
+    <p class="cbody">Does this single rule's own text name more than one of these three types internally, rather than leaving the other types to be found in a separate rule? A rule can do this on its own: a bulk-data threshold (attribute) sitting next to a covered-person test (relational) and an approval-necessity exemption (conduct), all in the same statute. When it does, the mix has already predicted a department problem before Stage 3 ever runs &mdash; see Stage 3's object comparison.</p>
   </div>
 </section>
 
@@ -124,9 +126,9 @@ description: "A framework for reading export-control and national-security rules
 <section class="csection" id="stage-03">
   <div class="chero__shell">
     <p class="ceyebrow">Stage 3 &middot; Cross-Reading</p>
-    <p class="cbody">Stage 1 and 2 read a single rule. This stage runs only when more than one rule applies to the same firm, and reads them together rather than side by side.</p>
+    <p class="cbody">Stage 1 and 2 read a single rule. This stage runs when more than one rule applies to the same firm &mdash; and also when a single rule's own exemption or condition clause names a second regime by reference (an exemption conditioned on another regulator's approval, say). In that case the second regime is read as a rule reaching the same firm in its own right, even though Stage 1 only picked one rule to begin with. Either way, this stage reads them together rather than side by side.</p>
     <p class="csub">Object comparison</p>
-    <p class="cbody">Do the rules target the same kind of fact, or different kinds: a person's identity, a thing's makeup, a conduct condition. The object type predicts which part of the firm can see it first: a person-type object routes to legal and ownership diligence, a thing-type object routes to supply-chain and technical diligence. Different object types mean the two readings sit in different departments by default.</p>
+    <p class="cbody">Do the rules target the same kind of fact, or different kinds: a person's identity, a thing's makeup, a conduct condition. The object type predicts which part of the firm can see it first: a person-type object routes to legal and ownership diligence, a thing-type object routes to supply-chain and technical diligence, a conduct-type object routes to whichever function owns that condition &mdash; regulatory affairs for an approval-necessity test, information security for a security-requirements test. Different object types mean the readings sit in different departments by default, whether those objects came from different rules or from the same rule's own mix (Stage 1's mix check).</p>
     <p class="csub">Design comparison</p>
     <p class="cbody">Did each rule redraw its line in the same direction, or differently. Two rules can move from territorial reach to a nexus test independently of each other, for unrelated stated reasons, and still end up catching the same third-country firm through separate paths. The comparison is not whether the rules coordinate; usually they do not.</p>
     <p class="csub">Jurisdiction and licensing authority</p>
@@ -164,6 +166,7 @@ description: "A framework for reading export-control and national-security rules
         <tr><td>Revenue share exposed</td><td>Share of that firm's revenue running through the named object.</td></tr>
         <tr><td>Substitution available</td><td>Whether the firm can route around the object: an alternate customer, supplier, or market.</td></tr>
         <tr><td>Prior positioning</td><td>Whether the firm is already acting on the object before any outcome: stockpiling, contract renegotiation, license applications filed and pending.</td></tr>
+        <tr><td>Coordination point</td><td>Whether a single role or function exists that assembles the separate sub-answers Stage 1's object types routed to different departments &mdash; the attribute reading from one function, the relational reading from another, the conduct reading from a third &mdash; into one determination for this rule. Distinct from whether each department read its own object type correctly: a firm can have every department right and still have no one who combines the readings. This variable doesn't decide the rule's outcome; it decides whether the firm can see that outcome before being told.</td></tr>
       </tbody>
     </table>
     <p class="csub">Scenarios</p>

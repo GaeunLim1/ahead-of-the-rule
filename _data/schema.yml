@@ -1,6 +1,9 @@
-# Master frame. Stage 1-2 read a single rule. Stage 3 reads multiple rules
-# together, when more than one applies. Stage 4 turns the reading into an
-# exposure matrix, informed by Stage 3.
+# Master frame. Stage 1-2 read a single rule — including checking whether
+# that one rule already names more than one object type internally. Stage 3
+# reads multiple rules together, when more than one applies or when one
+# rule's own text calls in a second regime. Stage 4 turns the reading into
+# an exposure matrix, informed by Stage 3, and asks whether anyone in the
+# firm is positioned to assemble it.
 
 object_of_the_rule:
   stage: 1
@@ -8,6 +11,12 @@ object_of_the_rule:
   open_question: >
     What does the text name as its target: a measured attribute, a position
     in a network, or a future conduct condition?
+  mix_check: >
+    Does this single rule's own text name more than one of these types
+    internally, rather than leaving one type to be found in a second rule?
+    A rule that mixes types inside itself already predicts department
+    fragmentation before Stage 3 ever runs, since each type routes to a
+    different function by default (see cross_reading, object comparison).
 
 design_layer:
   stage: 2
@@ -35,9 +44,15 @@ design_layer:
 
 cross_reading:
   stage: 3
-  runs_when: more than one rule applies to the same firm
+  runs_when: >
+    more than one rule applies to the same firm. This includes the case
+    where a single rule's own exemption or condition clause names a second
+    regime by reference (e.g. an exemption conditioned on another
+    regulator's approval) — that second regime is then read as a rule
+    reaching the same firm in its own right, even though only one rule was
+    picked at Stage 1.
   reads:
-    - "object comparison: do the rules target the same kind of fact (a person's identity, a thing's makeup, a conduct condition), or different kinds?"
+    - "object comparison: do the rules target the same kind of fact (a person's identity, a thing's makeup, a conduct condition), or different kinds? The object type predicts which function inside the firm sees it first — a person-type object routes to legal and ownership diligence, a thing-type object routes to supply-chain and technical diligence, a conduct-type object routes to whichever function owns that condition (regulatory affairs, information security). Different object types default to different functions."
     - "design comparison: did each rule redraw its line in the same direction (e.g. territorial reach to a nexus test), or differently?"
     - "jurisdiction and licensing authority: which regulator, on what basis, filed where, coordinated with the other regulator or not, and where one filing can read badly to the other."
   open_question: >
@@ -48,7 +63,18 @@ cross_reading:
 cost_layer:
   stage: 4
   types: []
-  variables: [distance from object, revenue share exposed, substitution available, prior positioning]
+  variables: [distance from object, revenue share exposed, substitution available, prior positioning, coordination point]
+  variable_notes:
+    coordination_point: >
+      Whether a single role or function exists that assembles the separate
+      sub-answers Stage 1's object types routed to different departments
+      (the attribute reading from one function, the relational reading
+      from another, the conduct reading from a third) into one determination
+      for this rule. Distinct from whether each department did its own
+      reading correctly: a firm can have every department reading its own
+      object type right and still have no one who combines the readings.
+      This variable does not itself decide the rule's outcome; it decides
+      whether the firm can see that outcome before being told.
   filled_by: the firm itself, from its own data
   informed_by: stage 3, when it ran
   scenarios: >
@@ -56,8 +82,9 @@ cost_layer:
     branch a rule's own timeline can take.
   open_question: >
     Firm by firm: how far from the named object, how much revenue is
-    exposed, is substitution available, and is the firm already positioning
-    before any outcome is known?
+    exposed, is substitution available, is the firm already positioning
+    before any outcome is known, and is there a coordination point that
+    can actually assemble that picture?
 
 method_note:
   statement: >
