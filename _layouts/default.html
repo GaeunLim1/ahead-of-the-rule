@@ -29,13 +29,6 @@
     <a class="masthead__mark" href="{{ '/' | relative_url }}">
       REGULATORY&nbsp;ORDER
     </a>
-    <nav class="nav" aria-label="Framework sections">
-      <ul>
-        {% for item in site.data.nav %}
-        <li><a href="{{ item.url | relative_url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.label }}</a></li>
-        {% endfor %}
-      </ul>
-    </nav>
   </div>
 </header>
 
