@@ -1489,7 +1489,7 @@ details[open] > summary { margin-bottom: 0.6rem; }
   gap: 0.55rem;
   padding: clamp(1.25rem, 3vw, 1.75rem);
   border: 1px solid var(--rule);
-  background: var(--paper);
+  background: var(--plate);
 }
 .cov-mech__num { font: 500 0.68rem/1 var(--mono); letter-spacing: 0.12em; color: var(--accent); }
 .cov-mech__name { font-family: var(--display); font-size: clamp(1.3rem, 1rem + 1.2vw, 1.65rem); }
@@ -1499,8 +1499,6 @@ details[open] > summary { margin-bottom: 0.6rem; }
   border-top: 1px solid var(--rule-faint);
   font: 500 0.72rem/1.3 var(--mono); letter-spacing: 0.06em; color: var(--accent);
 }
-.cov-mech__item--soft { background: var(--plate); border-style: dashed; }
-.cov-mech__item--soft .cov-mech__shape { color: var(--muted); }
 .cov-mech__arrow { align-self: center; color: var(--rule); font-size: 1.2rem; }
 @media (max-width: 639px) { .cov-mech__arrow { display: none; } }
 
