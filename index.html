@@ -18,7 +18,7 @@ description: "A framework for reading export-control and national-security rules
     <div class="cov-mech" aria-label="The four stages">
 
       <div class="cov-mech__item">
-        <p class="cov-mech__num">STAGE 01</p>
+        <p class="cov-mech__num">STAGE 01 &middot; RULE LAYER</p>
         <p class="cov-mech__name">Object of the Rule</p>
         <p class="cov-mech__note">What the text names as its target. Read from the article itself, before anything downstream.</p>
         <p class="cov-mech__shape">attribute &middot; relational &middot; conduct</p>
@@ -26,7 +26,7 @@ description: "A framework for reading export-control and national-security rules
       <span class="cov-mech__arrow" aria-hidden="true">&#8594;</span>
 
       <div class="cov-mech__item">
-        <p class="cov-mech__num">STAGE 02</p>
+        <p class="cov-mech__num">STAGE 02 &middot; RULE LAYER</p>
         <p class="cov-mech__name">Design Layer</p>
         <p class="cov-mech__note">Whether the rule stays inside the agency's authority or redraws the line, and what fires it.</p>
         <p class="cov-mech__shape">scope &times; trigger</p>
@@ -34,15 +34,15 @@ description: "A framework for reading export-control and national-security rules
       <span class="cov-mech__arrow" aria-hidden="true">&#8594;</span>
 
       <div class="cov-mech__item">
-        <p class="cov-mech__num">STAGE 03</p>
+        <p class="cov-mech__num">STAGE 03 &middot; FIRM LAYER</p>
         <p class="cov-mech__name">Cross-Reading</p>
-        <p class="cov-mech__note">Reads two rules together: what each targets, how each redraws its line, and who enforces it.</p>
+        <p class="cov-mech__note">Reads two rules together from the firm's position: what each targets, how each redraws its line, and who enforces it against this firm.</p>
         <p class="cov-mech__shape">object &middot; design &middot; jurisdiction</p>
       </div>
       <span class="cov-mech__arrow" aria-hidden="true">&#8594;</span>
 
       <div class="cov-mech__item">
-        <p class="cov-mech__num">STAGE 04</p>
+        <p class="cov-mech__num">STAGE 04 &middot; FIRM LAYER</p>
         <p class="cov-mech__name">Cost Layer</p>
         <p class="cov-mech__note">A per-firm matrix, filled before the outcome is known. It carries no fixed types: a label here would already be a result.</p>
         <p class="cov-mech__shape">variables &times; scenarios</p>
@@ -50,12 +50,17 @@ description: "A framework for reading export-control and national-security rules
 
     </div>
 
+    <!-- layers: who the stage is about -->
+    <div class="cov-block">
+      <p class="cov-mech__note"><strong>Rule layer (Stages 1&ndash;2).</strong> The subject is a single rule. It is read once and reads the same for any firm. <strong>Firm layer (Stages 3&ndash;4).</strong> The subject is a firm facing one or more rules. Stage 3 reads the rules from a typical firm situation; Stage 4 fills in one firm's own values.</p>
+    </div>
+
   </div>
 </section>
 
 <section class="csection" id="stage-01">
   <div class="chero__shell">
-    <p class="ceyebrow">Stage 1 &middot; Object of the Rule</p>
+    <p class="ceyebrow">Stage 1 &middot; Object of the Rule &middot; Rule layer</p>
     <p class="cbody">What the text names as its target. Read from the article itself, before anything downstream is considered.</p>
     <table class="cgap">
       <thead><tr><th>Type</th><th>Trigger</th><th>Example</th></tr></thead>
@@ -82,7 +87,7 @@ description: "A framework for reading export-control and national-security rules
 
 <section class="csection" id="stage-02">
   <div class="chero__shell">
-    <p class="ceyebrow">Stage 2 &middot; Design Layer</p>
+    <p class="ceyebrow">Stage 2 &middot; Design Layer &middot; Rule layer</p>
     <p class="cbody">Not whether the rule existed before the case. Whether this rulemaking sits inside the agency's authorizing text, or redraws that line, and separately, what fires it.</p>
     <p class="csub">Axis 1: scope of authority</p>
     <table class="cgap">
@@ -106,7 +111,8 @@ description: "A framework for reading export-control and national-security rules
 
 <section class="csection" id="stage-03">
   <div class="chero__shell">
-    <p class="ceyebrow">Stage 3 &middot; Cross-Reading</p>
+    <p class="ceyebrow">Stage 3 &middot; Cross-Reading &middot; Firm layer</p>
+    <p class="cbody">Not a comparison of the rules in the abstract. The rules are read from the position of a firm subject to both, so some answers below depend on a fact about the firm, not only on the text. Where a row is a fact about the rule (which agency, where a filing goes), it reads the same for any firm; where it is a fact about the firm (what gives jurisdiction, where a filing reads badly), it changes with the firm's situation.</p>
     <p class="csub">Object and design comparison</p>
     <table class="cgap">
       <thead><tr><th></th><th>Object type</th><th>Design direction</th></tr></thead>
@@ -132,19 +138,21 @@ description: "A framework for reading export-control and national-security rules
 
 <section class="csection" id="stage-04">
   <div class="chero__shell">
-    <p class="ceyebrow">Stage 4 &middot; Cost Layer</p>
+    <p class="ceyebrow">Stage 4 &middot; Cost Layer &middot; Firm layer</p>
     <p class="cbody">It carries no fixed types. A label here would already be a result, and results are not available before a case closes. This layer is a matrix of variables that can be filled at any point, including before the outcome is known. It is informed by Stage 3, when more than one rule applies.</p>
     <table class="cgap">
       <thead><tr><th>Variable</th><th>Reading</th></tr></thead>
       <tbody>
         <tr><td>Distance from object</td><td>Direct target, first-tier supplier or counterparty, or a third party with only an indirect interest.</td></tr>
         <tr><td>Revenue share exposed</td><td>Share of that firm's revenue running through the named object.</td></tr>
-        <tr><td>Substitution available</td><td>Whether the firm can route around the object: an alternate customer, supplier, or market.</td></tr>
+        <tr><td>Substitution available</td><td>Whether the firm can route around the object: an alternate customer, supplier, or market, and how long securing it would take.</td></tr>
+        <tr><td>Determination time</td><td>How long the firm needs to decide whether an item or counterparty falls under the rule, and whose information that decision depends on: the firm's own (its item's specifications) or the counterparty's (its ownership chain).</td></tr>
+        <tr><td>Time to trigger</td><td>How much time remains before the rule fires, read from the Stage 2 trigger and set against determination time and substitution lead time.</td></tr>
         <tr><td>Prior positioning</td><td>Whether the firm is already acting on the object before any outcome: stockpiling, contract renegotiation, license applications filed and pending.</td></tr>
         <tr><td>Coordination point</td><td>Whether one role assembles the departments' separate readings into a single determination, not whether each reading is correct.</td></tr>
       </tbody>
     </table>
     <p class="csub">Scenarios</p>
-    <p class="cbody">Named by condition, not by type: what the matrix looks like under each branch a rule's own timeline can take. When more than one rule applies, the branches cross.</p>
+    <p class="cbody">Named by condition, not by type: what the matrix looks like under each branch a rule's own timeline can take. When more than one rule applies, the branches cross. Every variable above is read per branch: the same action taken while a rule is suspended and after it is reinstated is not the same action.</p>
   </div>
 </section>
