@@ -1775,3 +1775,14 @@ details[open] > summary { margin-bottom: 0.6rem; }
   .dfour__n { padding: 0 1.05rem 0.35rem; border-bottom: none; font-style: italic; }
   .dfour__h { padding-top: 0; }
 }
+
+/* ------------------------------------------------------ table-adjacent prose
+   A .cbody paragraph sitting directly under a .cgap table (no .csub heading
+   between them) has no top margin by default, since tables carry no bottom
+   margin and the base p rule only sets margin-bottom. Give this specific
+   pairing its own spacing and a justified rag, distinct from a .cbody that
+   follows a subheading (left-aligned, unchanged). */
+.cgap + .cbody {
+  margin-top: 1.4rem;
+  text-align: justify;
+}
