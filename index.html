@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Overview
-description: "A framework for reading export-control and national-security rules: what the text names, what authority it claims, who carries exposure before the outcome, and where the outcome actually lands."
+description: "A framework for reading export-control and national-security rules: what the rule targets, how it is designed, how rules interact, and what conditions shape a firm's exposure before an outcome is known."
 ---
 
 <section class="cov">
@@ -11,7 +11,7 @@ description: "A framework for reading export-control and national-security rules
     <div class="cov-block cov-lede">
       <span class="cov-eyebrow">EXPORT CONTROL<span>&middot;</span>NATIONAL SECURITY</span>
       <h1 class="cov-title">A reading order for regulation</h1>
-      <p class="cov-standfirst">The frame traces a rule from the intent behind its design to the point a firm actually has to comply, whether or not implementation is delayed, staged, or stayed along the way.</p>
+      <p class="cov-standfirst">The frame traces a rule from its target and design through its interaction with other rules, to the conditions shaping a firm's exposure before an outcome is known.</p>
     </div>
 
     <!-- the frame, as a spine (summary; full detail follows below) -->
@@ -19,8 +19,8 @@ description: "A framework for reading export-control and national-security rules
 
       <div class="cov-mech__item">
         <p class="cov-mech__num">STAGE 01</p>
-        <p class="cov-mech__name">Object of the Rule</p>
-        <p class="cov-mech__note">What the text names as its target. Read from the article itself, before anything downstream.</p>
+        <p class="cov-mech__name">Target of the Rule</p>
+        <p class="cov-mech__note">What the rule targets and the criteria through which that target is identified.</p>
         <p class="cov-mech__shape">attribute &middot; relational &middot; conduct</p>
       </div>
       <span class="cov-mech__arrow" aria-hidden="true">&#8594;</span>
@@ -28,23 +28,23 @@ description: "A framework for reading export-control and national-security rules
       <div class="cov-mech__item">
         <p class="cov-mech__num">STAGE 02</p>
         <p class="cov-mech__name">Design of the Rule</p>
-        <p class="cov-mech__note">Whether the rule stays inside the agency's authority or redraws the line, and what fires it.</p>
-        <p class="cov-mech__shape">scope &times; trigger</p>
+        <p class="cov-mech__note">The relationship between the rule's authority and operative reach, and the conditions that trigger its operation.</p>
+        <p class="cov-mech__shape">authority &middot; scope &middot; trigger</p>
       </div>
       <span class="cov-mech__arrow" aria-hidden="true">&#8594;</span>
 
       <div class="cov-mech__item">
         <p class="cov-mech__num">STAGE 03</p>
         <p class="cov-mech__name">Rule Interaction</p>
-        <p class="cov-mech__note">Reads two rules together from the firm's position: what each targets, how each redraws its line, and who enforces it against this firm.</p>
-        <p class="cov-mech__shape">object &middot; design &middot; jurisdiction</p>
+        <p class="cov-mech__note">How two or more rules connect through facts about a firm or transaction, and what relationships arise where they meet.</p>
+        <p class="cov-mech__shape">connecting facts &middot; relation at crossing</p>
       </div>
       <span class="cov-mech__arrow" aria-hidden="true">&#8594;</span>
 
       <div class="cov-mech__item">
         <p class="cov-mech__num">STAGE 04</p>
-        <p class="cov-mech__name">Cost Matrix</p>
-        <p class="cov-mech__note">A per-firm matrix, filled before the outcome is known. It carries no fixed types: a label here would already be a result.</p>
+        <p class="cov-mech__name">Ex Ante Exposure Matrix</p>
+        <p class="cov-mech__note">A per-firm matrix of exposure, timing, substitution, preparation, and determination variables, read across possible scenarios.</p>
         <p class="cov-mech__shape">variables &times; scenarios</p>
       </div>
 
@@ -55,24 +55,24 @@ description: "A framework for reading export-control and national-security rules
 
 <section class="csection" id="stage-01">
   <div class="chero__shell">
-    <p class="ceyebrow">Stage 1 &middot; Object of the Rule</p>
-    <p class="cbody">What the text names as its target. Read from the article itself, before anything downstream is considered.</p>
+    <p class="ceyebrow">Stage 1 &middot; Target of the Rule</p>
+    <p class="cbody">What the rule targets and the criteria through which that target is identified. Read the target before considering how the rule interacts with other rules or affects a firm's position.</p>
     <table class="cgap">
-      <thead><tr><th>Type</th><th>Trigger</th><th>Example</th></tr></thead>
+      <thead><tr><th>Type</th><th>Measured on</th><th>Example</th></tr></thead>
       <tbody>
         <tr>
           <td>Attribute-based</td>
-          <td>A continuous value measured on the item itself: content share, technical lineage, an aggregated count.</td>
+          <td>An attribute or measurable property of the item, data, technology, or activity itself, such as content share, technical lineage, or an aggregated count.</td>
           <td>A minimum content threshold by weight or value; a bulk-data threshold measured in persons (e.g. 100+ individuals' genomic records).</td>
         </tr>
         <tr>
           <td>Relational</td>
-          <td>A position in a network: nationality, headquarters location, a contract chain, a control relationship.</td>
+          <td>A relationship to another party, jurisdiction, or point in a transaction chain, such as nationality, headquarters location, contractual connection, ownership, or control.</td>
           <td>Headquarters in a restricted jurisdiction; a re-export clause running through a third-country buyer; corporate affiliation extending to subsidiaries, parents, and successor entities.</td>
         </tr>
         <tr>
           <td>Conduct-based</td>
-          <td>A future behavior the text conditions on, not a present property.</td>
+          <td>An act, omission, undertaking, or required behavior on which the rule's operation or a condition depends, rather than solely on a present property.</td>
           <td>A disciplinary commitment made as a condition of a suspended denial order; a domestic-handling certification submitted as a condition of marketing approval.</td>
         </tr>
       </tbody>
@@ -83,71 +83,137 @@ description: "A framework for reading export-control and national-security rules
 <section class="csection" id="stage-02">
   <div class="chero__shell">
     <p class="ceyebrow">Stage 2 &middot; Design of the Rule</p>
-    <p class="cbody">Not whether the rule existed before the case. Whether this rulemaking sits inside the agency's authorizing text, or redraws that line, and separately, what fires it.</p>
-    <p class="csub">Axis 1: scope of authority</p>
+    <p class="cbody">How the rule operates through its authority, operative reach, and triggering conditions. Examine the relationship between the scope of authority and the scope of application separately from the conditions that activate, change, or terminate the rule.</p>
+    <p class="csub">Axis 1: authority and operative reach</p>
     <table class="cgap">
-      <thead><tr><th>Type</th><th>Reading</th></tr></thead>
+      <thead><tr><th>Relationship</th><th>Reading</th></tr></thead>
       <tbody>
-        <tr><td>Within the existing line</td><td>The rulemaking moves inside the range already handed to the agency. Lower legal exposure once in force.</td></tr>
-        <tr><td>Redrawing the line</td><td>The rulemaking extends the agency's own reach: a new jurisdictional or definitional line, not a new number inside an old one.</td></tr>
+        <tr>
+          <td>Within identified scope</td>
+          <td>The operative reach appears to remain within the identified authorizing scope.</td>
+        </tr>
+        <tr>
+          <td>Scope extension</td>
+          <td>The operative reach appears to extend to additional actors, items, transactions, jurisdictions, or circumstances beyond the identified scope.</td>
+        </tr>
+        <tr>
+          <td>Scope relationship unresolved</td>
+          <td>The relationship between the identified authority and the operative reach cannot yet be determined from the dimensions examined.</td>
+        </tr>
       </tbody>
     </table>
-    <p class="cbody">Read the reach against the authorizing text and stated aim, cited directly rather than summarized. If the operative text's actual reach matches those two, it stays within the existing line. If it pulls in a new class of actor that neither covers, it redraws the line.</p>
+    <p class="cbody">Read the operative reach against the authorizing text and stated aim. Examine the authorizing basis, delegated scope, actors and circumstances covered, and the boundaries of application. Distinguish a change in the reach of the rule from a change in a threshold or condition within an existing scope.</p>
     <p class="csub">Axis 2: trigger mechanism</p>
     <table class="cgap">
       <thead><tr><th>Type</th><th>Reading</th></tr></thead>
       <tbody>
-        <tr><td>Numeric trigger</td><td>Fires on a threshold or a calendar date, independent of any actor's behavior.</td></tr>
-        <tr><td>Conduct trigger</td><td>Fires on a breach or a failure to perform a condition. Creates a latent interval between the breach and its detection that a numeric trigger cannot produce.</td></tr>
+        <tr>
+          <td>Attribute or threshold trigger</td>
+          <td>Triggered when an item, data set, transaction, or other measurable characteristic reaches a specified threshold.</td>
+        </tr>
+        <tr>
+          <td>Temporal trigger</td>
+          <td>Triggered or altered by an effective date, deadline, specified period, or other time-dependent condition.</td>
+        </tr>
+        <tr>
+          <td>Status or listing trigger</td>
+          <td>Triggered by a designation, list entry, classification, authorization status, or change in status.</td>
+        </tr>
+        <tr>
+          <td>Conduct or performance trigger</td>
+          <td>Triggered by an act, omission, breach, or failure to satisfy a condition. The interval between the triggering conduct and its detection may create a determination gap.</td>
+        </tr>
+        <tr>
+          <td>Relationship or transaction trigger</td>
+          <td>Triggered when a specified relationship, transaction, transfer, or other connection arises.</td>
+        </tr>
+        <tr>
+          <td>Determination-based trigger</td>
+          <td>Triggered or altered by an agency determination, classification, designation, or other specified decision.</td>
+        </tr>
       </tbody>
     </table>
+    <p class="cbody">A rule may involve more than one trigger, and a trigger may depend on a combination of conditions.</p>
   </div>
 </section>
 
 <section class="csection" id="stage-03">
   <div class="chero__shell">
     <p class="ceyebrow">Stage 3 &middot; Rule Interaction</p>
-    <p class="cbody">Not a comparison of the rules in the abstract. The rules are read from the position of a firm subject to both, so some answers below depend on a fact about the firm, not only on the text. Where a row is a fact about the rule (which agency, where a filing goes), it reads the same for any firm; where it is a fact about the firm (what gives jurisdiction, where a filing reads badly), it changes with the firm's situation.</p>
-    <p class="csub">Object and design comparison</p>
+    <p class="cbody">Not a comparison of rules in the abstract. Rules are read together through the facts of a firm or transaction, where a single fact may connect to more than one rule. Each rule's Stage 1 and 2 reading, administering authority, and filing requirements are treated as inputs to this stage. The analysis identifies where rules connect to the firm and what relationship arises where they meet. Each row represents a connecting fact; the connections depend on the firm's circumstances.</p>
+    <p class="csub">Connecting facts</p>
     <table class="cgap">
-      <thead><tr><th></th><th>Object type</th><th>Design direction</th></tr></thead>
+      <thead><tr><th>Fact about the firm</th><th>Question</th></tr></thead>
       <tbody>
-        <tr><td>Rule A</td><td>Its Stage 1 type, carried forward</td><td>Its Stage 2 direction, carried forward</td></tr>
-        <tr><td>Rule B</td><td>Its Stage 1 type, carried forward</td><td>Its Stage 2 direction, carried forward</td></tr>
+        <tr><td>The firm</td><td>Who it is: nationality, place of incorporation, place of establishment, ownership, or control.</td></tr>
+        <tr><td>The item</td><td>What it is and where it originates or sits: origin, content, technical characteristics, classification, or location.</td></tr>
+        <tr><td>The act</td><td>What the firm does and where: export, re-export, transfer, provision, handling, service, and the place it happens.</td></tr>
+        <tr><td>The counterparty</td><td>With whom: identity, ownership, designation, destination, or position in the transaction chain.</td></tr>
+        <tr><td>The use</td><td>For what: end use, end user, service purpose, or downstream activity.</td></tr>
       </tbody>
     </table>
-    <p class="cbody">Matching object types or matching design directions mean the two readings tend to land in the same place. Differing answers mean they diverge from the start, usually without either rule having coordinated with the other.</p>
-    <p class="csub">Jurisdiction and licensing authority</p>
+    <p class="cbody">Read each fact against every rule, one column per rule, noting whether and how the fact connects to that rule. The table extends to any number of rules. A row where two or more rules connect is a crossing point.</p>
+    <p class="csub">Relation at a crossing point</p>
     <table class="cgap">
-      <thead><tr><th>Question</th><th>Reading</th></tr></thead>
+      <thead><tr><th>Relation</th><th>Reading</th></tr></thead>
       <tbody>
-        <tr><td>Regulator</td><td>Which agency administers each rule.</td></tr>
-        <tr><td>Basis for reach</td><td>What fact gives that regulator jurisdiction over this firm.</td></tr>
-        <tr><td>Filed where</td><td>Where a license or disclosure under each rule is actually submitted.</td></tr>
-        <tr><td>Coordination</td><td>Whether the two regulators coordinate with each other. Usually they do not, and not because of a jurisdictional gap: a gatekeeping-type rule and a validation-type rule can be built to serve entirely different missions, with no shared vocabulary and no institutional reason to coordinate, whether they sit in the same country or different ones.</td></tr>
-        <tr><td>Cross-read risk</td><td>Where a filing made to satisfy one regulator can read badly to the other.</td></tr>
+        <tr>
+          <td>Overlap</td>
+          <td>Multiple rules apply, and their requirements can be satisfied concurrently in the circumstances examined.</td>
+        </tr>
+        <tr>
+          <td>Operational tension</td>
+          <td>Multiple rules apply, but their information, documentation, timing, or procedural requirements create additional coordination or decision demands.</td>
+        </tr>
+        <tr>
+          <td>Legal conflict</td>
+          <td>Requirements cannot be satisfied concurrently in the relevant circumstances; satisfying one requires or produces non-compliance with another.</td>
+        </tr>
       </tbody>
     </table>
+    <p class="csub">Whose rules are crossing</p>
+    <p class="cbody">Read who issues and administers each rule. Rules within the same government may share an institutional or regulatory context, including alignment between agencies. Rules from different governments arise from separate authorities and may lack a common institutional mechanism for resolving conflicting requirements. The relationship between the rules remains dependent on the specific crossing point and circumstances.</p>
   </div>
 </section>
 
 <section class="csection" id="stage-04">
   <div class="chero__shell">
-    <p class="ceyebrow">Stage 4 &middot; Cost Matrix</p>
-    <p class="cbody">It carries no fixed types. A label here would already be a result, and results are not available before a case closes. Instead, it is a matrix of variables that can be filled at any point, including before the outcome is known. It is informed by Stage 3, when more than one rule applies.</p>
+    <p class="ceyebrow">Stage 4 &middot; Ex Ante Exposure Matrix</p>
+    <p class="cbody">A matrix of variables describing a firm's exposure, decision requirements, and available responses before an outcome is known. The variables can be examined at different points in the rule's timeline and are informed by Stage 3 where more than one rule connects to the firm. The matrix does not presume a fixed outcome or cost level.</p>
     <table class="cgap">
       <thead><tr><th>Variable</th><th>Reading</th></tr></thead>
       <tbody>
-        <tr><td>Distance from object</td><td>Direct target, first-tier supplier or counterparty, or a third party with only an indirect interest.</td></tr>
-        <tr><td>Revenue share exposed</td><td>Share of that firm's revenue running through the named object.</td></tr>
-        <tr><td>Substitution available</td><td>Whether the firm can route around the object: an alternate customer, supplier, or market, and how long securing it would take.</td></tr>
-        <tr><td>Determination time</td><td>How long the firm needs to decide whether an item or counterparty falls under the rule, and whose information that decision depends on: the firm's own (its item's specifications) or the counterparty's (its ownership chain).</td></tr>
-        <tr><td>Time to trigger</td><td>How much time remains before the rule fires, read from the Stage 2 trigger and set against determination time and substitution lead time.</td></tr>
-        <tr><td>Prior positioning</td><td>Whether the firm is already acting on the object before any outcome: stockpiling, contract renegotiation, license applications filed and pending.</td></tr>
-        <tr><td>Coordination point</td><td>Whether one role assembles the departments' separate readings into a single determination, not whether each reading is correct.</td></tr>
+        <tr>
+          <td>Tier relative to target</td>
+          <td>Whether the firm is a direct target, a first-tier supplier or counterparty, or a third party connected through an indirect relationship.</td>
+        </tr>
+        <tr>
+          <td>Revenue share exposed</td>
+          <td>Share of the firm's revenue associated with the affected item, transaction, counterparty, or market.</td>
+        </tr>
+        <tr>
+          <td>Substitution available</td>
+          <td>Whether the firm can identify an alternative customer, supplier, counterparty, route, or market, and how long securing or switching to it would take.</td>
+        </tr>
+        <tr>
+          <td>Determination time</td>
+          <td>How long the firm needs to determine whether an item, counterparty, transaction, or activity falls within the rule, and whose information that determination depends on: the firm's own information (such as item specifications) or a counterparty's information (such as its ownership chain).</td>
+        </tr>
+        <tr>
+          <td>Time to effective date</td>
+          <td>How much time remains before the rule takes effect or a relevant deadline occurs, read against the applicable trigger and set against determination time and substitution lead time.</td>
+        </tr>
+        <tr>
+          <td>Advance preparation</td>
+          <td>What preparatory actions are available or already underway before the relevant outcome: stockpiling, contract renegotiation, alternative arrangements, or license applications filed and pending.</td>
+        </tr>
+        <tr>
+          <td>Determination owner</td>
+          <td>Whether one role assembles separate departmental readings and information into a consolidated determination, rather than whether each individual reading is correct.</td>
+        </tr>
       </tbody>
     </table>
     <p class="csub">Scenarios</p>
-    <p class="cbody">Named by condition, not by type: what the matrix looks like under each branch a rule's own timeline can take. When more than one rule applies, the branches cross. Every variable above is read per branch: the same action taken while a rule is suspended and after it is reinstated is not the same action.</p>
+    <p class="cbody">Scenarios are named by condition rather than by outcome type. Each branch represents a relevant variation in a rule's timeline, triggering conditions, or interaction with other rules. When more than one rule applies, the branches may intersect. Every variable above is read per branch: the same action taken while a rule is suspended and after it is reinstated may occupy different positions in the matrix.</p>
   </div>
 </section>
