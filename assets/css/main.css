@@ -1,12 +1,12 @@
 /* ==========================================================================
-   How Regulatory Order Reaches Actors — Framework v5
+   Regulatory Order
 
-   Type is deliberately not coded to any jurisdiction. The framework compares
-   regulatory orders across national authorities, so setting it in any one
-   government's civic typeface would put a thumb on the scale. Source Sans 3 is
-   neutral, holds up at small sizes in dense tables, and carries wide Latin,
-   Greek, and Cyrillic coverage. Hangul and CJK fall back to system faces so
-   entity names in case files render in a matched weight rather than a default.
+   Type is deliberately not coded to any jurisdiction. The frame traces rules
+   across national authorities, so setting it in any one government's civic
+   typeface would put a thumb on the scale. Source Sans 3 is neutral, holds up
+   at small sizes in dense tables, and carries wide Latin, Greek, and Cyrillic
+   coverage. Hangul and CJK fall back to system faces so entity names render in
+   a matched weight rather than a default.
    ========================================================================== */
 
 :root {

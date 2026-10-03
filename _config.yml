@@ -1,6 +1,6 @@
 title: Regulatory Order
 description: >-
-  A research site on export-control and national-security regulation, read through a fixed frame: what the rule names, what authority it claims, who carries exposure before any outcome is known, and where the outcome actually lands.
+  A fixed frame for export-control and national-security rules: what each rule names, how far it reaches, where it attaches at each transfer, and where its structure can become supply chain risk. Each finding is tagged by what it rests on.
 lang: en
 
 baseurl: /regulatory-order
@@ -16,5 +16,3 @@ exclude:
   - README.md
   - docs/
   - scripts/
-
-framework_version: "v1.0"
