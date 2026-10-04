@@ -441,6 +441,41 @@ tr.is-on td:first-child { color: var(--ink); font-weight: 500; }
 tr.is-off td { color: var(--muted); }
 .hit__cap { font: 500 0.64rem/1 var(--mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
 
+/* Two-regime comparison. One transaction, two rules read side by side.
+   The variable sits in the first column; each regime gets its own column. */
+.cpair { width: 100%; border-collapse: collapse; }
+.cpair th {
+  text-align: left; vertical-align: bottom; padding: 0 1rem 0.6rem 0;
+  font: 500 0.82rem/1.3 var(--mono); letter-spacing: 0.05em;
+  color: var(--muted); border-bottom: 1px solid var(--rule);
+}
+.cpair th.cpair__reg { color: var(--accent); }
+.cpair td {
+  text-align: left; vertical-align: top; padding: 0.85rem 1rem 0.85rem 0;
+  font-size: 0.95rem; line-height: 1.5; border-bottom: 1px solid var(--rule-faint);
+  color: var(--ink-soft);
+}
+.cpair td.cpair__var {
+  font-family: var(--display); font-size: 1rem; color: var(--ink);
+  white-space: nowrap; padding-right: 1.25rem; width: 9.5rem;
+}
+.cpair tr:last-child td { border-bottom: none; }
+.cpair .hit b { display:inline-block; font-size: 1.05rem; line-height: 1; }
+.cpair .hit--on b { color: var(--accent); }
+.cpair .hit--on b::before { content: "\25CF"; }
+.cpair .hit--off b { color: var(--rule); }
+.cpair .hit--off b::before { content: "\25CB"; }
+/* a row where the two regimes meet */
+.cpair tr.cross td { background: var(--accent-soft); }
+.cross-note { font: 500 0.78rem/1.4 var(--mono); color: var(--accent); margin: 0.5rem 0 0; }
+@media (max-width: 680px) {
+  .cpair, .cpair thead, .cpair tbody, .cpair tr, .cpair td { display: block; }
+  .cpair thead { display: none; }
+  .cpair tr { padding: 0.7rem 0; border-bottom: 1px solid var(--rule-faint); }
+  .cpair td { border-bottom: none; padding: 0.15rem 0; width: auto !important; white-space: normal; }
+  .cpair td.cpair__var { font-size: 1.05rem; padding-top: 0.3rem; }
+}
+
 /* End-of-page link back to the frame. A full-width block, not a table cell,
    so the route from a worked reading to the frame is unmissable. */
 .frame-cta {
