@@ -1850,3 +1850,9 @@ details[open] > summary { margin-bottom: 0.6rem; }
   margin-top: 1.4rem;
   text-align: justify;
 }
+
+/* grouped .cgap tables (rowspan groups): rows after the first in a group start
+   with the variable cell, so reset the first-column display style for them */
+.cgap:has(td[rowspan]) tr:not(:has(> td[rowspan])) > td:first-child {
+  font-family: inherit; font-size: 0.95rem; color: var(--ink-soft); white-space: normal; padding-right: 1rem;
+}
