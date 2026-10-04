@@ -18,8 +18,8 @@ description: "The BIS Affiliates Rule put through a fixed frame: what the rule n
     <table class="cgap">
       <thead><tr><th>Type</th><th class="hit__cap">This rule</th><th>Rests on</th></tr></thead>
       <tbody>
-        <tr class="is-off"><td>Attribute-based</td><td class="hit hit--off"><b></b></td><td></td></tr>
-        <tr class="is-on"><td>Relational</td><td class="hit hit--on"><b></b></td><td></td></tr>
+        <tr class="is-off"><td>Item-based</td><td class="hit hit--off"><b></b></td><td></td></tr>
+        <tr class="is-on"><td>Party-based</td><td class="hit hit--on"><b></b></td><td></td></tr>
         <tr class="is-on"><td>Conduct-based</td><td class="hit hit--on"><b></b></td><td></td></tr>
       </tbody>
     </table>
@@ -44,27 +44,27 @@ description: "The BIS Affiliates Rule put through a fixed frame: what the rule n
       <thead><tr><th>Variable</th><th>On this rule</th><th>Rests on</th></tr></thead>
       <tbody>
         <tr>
-          <td>Event</td>
+          <td>Transfer event</td>
           <td>Each export, reexport, or in-country transfer.</td>
           <td></td>
         </tr>
         <tr>
-          <td>State</td>
+          <td>Measured value</td>
           <td>Ownership percentage. Moves without any change to the rule.</td>
           <td></td>
         </tr>
         <tr>
-          <td>Party</td>
+          <td>Party bound</td>
           <td>Exporter, reexporter, or transferor. Named as a single actor.</td>
           <td></td>
         </tr>
         <tr>
-          <td>Edge</td>
+          <td>Where it stops</td>
           <td>May reopen at every hop. US-clear could turn EU-licensable.</td>
           <td><span class="tag">In the structure</span></td>
         </tr>
         <tr>
-          <td>Layer</td>
+          <td>Overlapping rules</td>
           <td>EAR and EU Dual-Use: same fact, two lists. Neither authorization would substitute for the other.</td>
           <td><span class="tag">In the structure</span></td>
         </tr>
@@ -80,22 +80,22 @@ description: "The BIS Affiliates Rule put through a fixed frame: what the rule n
       <thead><tr><th>Variable</th><th>On this rule</th><th>Rests on</th></tr></thead>
       <tbody>
         <tr>
-          <td>Position</td>
+          <td>Position in the chain</td>
           <td>On the party, not the item. A clean item could still be held by its recipient.</td>
           <td><span class="tag">In the structure</span></td>
         </tr>
         <tr>
-          <td>Substitutes</td>
+          <td>Workarounds</td>
           <td>Resolve, license, or exception. All close at once if ownership stays unresolved.</td>
           <td></td>
         </tr>
         <tr>
-          <td>Boundary Settlement</td>
+          <td>Scope certainty</td>
           <td>Ownership must be established. Where that data sits, and who establishes it, is unsaid.</td>
           <td><span class="tag tag--flag">Depends on the chain</span></td>
         </tr>
         <tr>
-          <td>Response Window</td>
+          <td>Response window</td>
           <td>Fires with no prior signal. Only the 60-day TGL as buffer.</td>
           <td></td>
         </tr>
