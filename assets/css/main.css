@@ -426,6 +426,35 @@ a:hover { color: var(--accent-strong); }
 .tag--flag { background: var(--flag-soft); color: var(--flag); }
 .tag--dash { background: var(--plate-sunk); color: var(--muted); }
 
+/* Hit markers: which listed type/variable this rule lands on. A filled dot =
+   applies, a ring = not applicable. The dot carries the finding, so the row
+   needs no prose. */
+.hit { text-align: center; width: 4.5rem; white-space: nowrap; }
+.hit b { display: inline-block; font-size: 1.05rem; line-height: 1; }
+.hit--on b { color: var(--accent); }
+.hit--on b::before { content: "\25CF"; }          /* filled circle */
+.hit--off b { color: var(--rule); }
+.hit--off b::before { content: "\25CB"; }          /* ring */
+.hit--flag b { color: var(--flag); }
+.hit--flag b::before { content: "\25CF"; }
+tr.is-on td:first-child { color: var(--ink); font-weight: 500; }
+tr.is-off td { color: var(--muted); }
+.hit__cap { font: 500 0.64rem/1 var(--mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+
+/* End-of-page link back to the frame. A full-width block, not a table cell,
+   so the route from a worked reading to the frame is unmissable. */
+.frame-cta {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 1rem;
+  margin-top: 2.5rem; padding: 1.4rem 1.6rem;
+  border: 1px solid var(--rule); background: var(--plate);
+  text-decoration: none; color: inherit;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+.frame-cta:hover, .frame-cta:focus-visible { border-color: var(--accent); background: var(--plate-sunk); outline: none; }
+.frame-cta__cap { font: 500 0.64rem/1 var(--mono); letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); display: block; margin-bottom: 0.45rem; }
+.frame-cta__name { font-family: var(--display); font-size: 1.35rem; font-weight: 500; color: var(--ink); }
+.frame-cta__go { font-size: 1.5rem; color: var(--accent); flex: 0 0 auto; }
+
 /* ---------------------------------------------------------------- callout */
 .callout {
   background: var(--plate-sunk);
