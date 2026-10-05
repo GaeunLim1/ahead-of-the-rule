@@ -1870,3 +1870,22 @@ details[open] > summary { margin-bottom: 0.6rem; }
 .masthead__nav a:hover,
 .masthead__nav a:focus-visible { color: var(--accent); }
 .masthead__nav a[aria-current="page"] { color: var(--accent); border-bottom-color: var(--accent); }
+
+/* ------------------------------------------------ spacing and column alignment
+   Prose, tables and subheadings inside a section get explicit gaps, and every
+   two-regime table shares one column grid so the EU and US columns line up
+   from table to table. Cells carry a small inner padding so shaded rows do not
+   run text into the edge of their fill. */
+.cbody + .cpair, .cbody + .cgap { margin-top: 1.6rem; }
+.cpair + .cbody { margin-top: 1.6rem; }
+.cpair + .csub, .cgap + .csub, .cbody + .csub { margin-top: 2.6rem; }
+.csub + .cpair, .csub + .cgap { margin-top: 0.4rem; }
+
+.cpair { table-layout: fixed; }
+.cpair th, .cpair td { padding-left: 0.75rem; padding-right: 1rem; }
+.cpair th.cpair__var, .cpair td.cpair__var { width: 13rem; white-space: normal; }
+@media (max-width: 680px) {
+  .cpair { table-layout: auto; }
+  .cpair td { padding-left: 0.75rem; padding-right: 0.75rem; }
+  .cpair td.cpair__var { width: auto; }
+}
