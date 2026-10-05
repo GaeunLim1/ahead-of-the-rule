@@ -24,6 +24,15 @@
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
+<header class="masthead">
+  <div class="shell masthead__inner">
+    <nav class="masthead__nav" aria-label="Pages">
+      <a href="{{ '/framework/' | relative_url }}"{% if page.url == '/framework/' %} aria-current="page"{% endif %}>The frame</a>
+      <a href="{{ '/' | relative_url }}"{% if page.url == '/' or page.url == '/index.html' %} aria-current="page"{% endif %}>Worked analysis</a>
+    </nav>
+  </div>
+</header>
+
 <main id="main">
 {{ content }}
 </main>
