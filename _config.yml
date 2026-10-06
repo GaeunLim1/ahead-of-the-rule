@@ -1,9 +1,9 @@
-title: Text to Transaction
+title: Ahead of the Rule
 description: >-
-  Identifying supply chain risk when export control and national-security rules change: what changed, where it reaches a firm's chain of exports and reexports, what needs a second look, and where supply chain risk can arise. Each finding is tagged by what it rests on.
+  What a firm needs to know before a new or amended export control rule applies: where it reaches the chain of exports and reexports, what must be checked again, and where supply can be held up. Each finding is tagged by what it rests on.
 lang: en
 
-baseurl: /text-to-transaction
+baseurl: /ahead-of-the-rule
 url: https://gaeunlim1.github.io
 
 # GitHub Pages builds this with its own Jekyll. No Actions workflow required.
