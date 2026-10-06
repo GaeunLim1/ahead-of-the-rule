@@ -1565,6 +1565,10 @@ details[open] > summary { margin-bottom: 0.6rem; }
   border: 1px solid var(--rule);
   background: var(--plate);
 }
+
+.cov-mech__item--soft {
+  border-style: dashed;
+}
 .cov-mech__num { font: 500 0.68rem/1 var(--mono); letter-spacing: 0.12em; color: var(--accent); }
 .cov-mech__name { font-family: var(--display); font-size: clamp(1.3rem, 1rem + 1.2vw, 1.65rem); }
 .cov-mech__note { color: var(--muted); font-size: 0.95rem; line-height: 1.5; }
