@@ -9,17 +9,44 @@ description: "A sample of the framework applied. Two export control changes on o
   <div class="chero__shell">
     <p class="chero__id">SAMPLE · EU 9E503.l. × US AFFILIATES RULE</p>
     <h1 class="chero__title">When Two Export Control Rules Change at Once: A Sample Review</h1>
-    <p class="chero__subject">Two changes, read side by side. The EU adds Dual-Use entry 9E503.l. on development technology for gas turbine engine axial compressors. The US brings back the BIS Affiliates Rule on who owns the recipient. Both are expected to apply from November 2026. The review follows each change from the rule text through the export and reexport chain to the compliance checks and potential supply-chain disruption it triggers.</p>
+    <p class="chero__subject">The EU adds Dual-Use entry 9E503.l. on technology for developing gas turbine compressors. The US brings back the Affiliates Rule on who owns the recipient. Both are expected to apply from November 2026. One export route, read through both.</p>
 
-    <div class="ctrace">
-      <span class="ctrace__cap">THE TWO RULES ON THIS TRANSACTION</span>
-      <span class="ctrace__lane">
-        <span class="ctrace__node ctrace__node--on">EU 9E503.l. · the item</span>
-        <span class="ctrace__link"></span>
-        <span class="ctrace__node ctrace__node--on">US Affiliates Rule · the party</span>
-      </span>
-      <span class="ctrace__note">Different targets, same export chain. One is read on what the item is; the other on who owns the recipient.</span>
-    </div>
+    <figure class="croute" aria-label="Assumed export route and the rules that reach each leg">
+      <figcaption class="croute__cap">THE ASSUMED EXPORT ROUTE <span class="tag tag--flag">An assumption</span></figcaption>
+      <ol class="croute__lane">
+        <li class="croute__node">
+          <span class="croute__where">United States</span>
+          <b class="croute__who">US partner</b>
+          <span class="croute__what">Holds the compressor technology</span>
+        </li>
+        <li class="croute__leg">
+          <span class="croute__rules"><span class="croute__rule croute__rule--us">US</span></span>
+        </li>
+        <li class="croute__node croute__node--held">
+          <span class="croute__where">EU Member State</span>
+          <b class="croute__who">Z</b>
+          <span class="croute__what">Owned 50%+ by Y, itself owned 50%+ by listed X</span>
+        </li>
+        <li class="croute__leg croute__leg--both">
+          <span class="croute__rules"><span class="croute__rule croute__rule--us">US</span><span class="croute__rule croute__rule--eu">EU</span></span>
+        </li>
+        <li class="croute__node croute__node--held">
+          <span class="croute__where">Third country, outside EU001</span>
+          <b class="croute__who">W</b>
+          <span class="croute__what">Owned 50%+ by Z</span>
+        </li>
+        <li class="croute__leg">
+          <span class="croute__rules"><span class="croute__rule croute__rule--us">US</span><span class="croute__rule croute__rule--eu croute__rule--via">EU</span></span>
+        </li>
+        <li class="croute__node">
+          <span class="croute__where">Onward</span>
+          <b class="croute__who">Customer</b>
+          <span class="croute__what">Screened for listed owners</span>
+        </li>
+      </ol>
+      <p class="croute__key"><span class="croute__rule croute__rule--us">US</span> Affiliates Rule, read on who owns each party. <span class="croute__rule croute__rule--eu">EU</span> Dual-Use entry 9E503.l., read on the item leaving the Union. <span class="croute__rule croute__rule--eu croute__rule--via">EU</span> Through licence conditions only.</p>
+      <p class="croute__note">The leg from Z to W is the only one both rules reach directly, at the same moment.</p>
+    </figure>
   </div>
 </section>
 
@@ -67,13 +94,13 @@ description: "A sample of the framework applied. Two export control changes on o
 <section class="csection" id="chain">
   <div class="chero__shell">
     <p class="ceyebrow">2 &middot; Place it on the transaction flow</p>
-    <div class="cbody"><p><b>Assumed chain:</b> an EU entity receives US-origin technology, or builds on it, and transmits the result to an affiliate outside the Union. The affiliate reexports it to supply a customer. <span class="tag tag--flag">An assumption</span></p></div>
+    <div class="cbody"><p><b>Assumed chain:</b> a listed party, X, owns 50% or more of Y; Y owns 50% or more of Z, an EU entity; Z owns 50% or more of W, established in a third country outside the destinations of Union general export authorisation EU001. Z receives compressor development technology from a US partner and transmits a package containing that US-origin technology to W. W supplies a customer. The third country's own export controls are outside this review. <span class="tag tag--flag">An assumption</span></p></div>
     <table class="cpair" style="--reg-a:'EU 9E503.l.'; --reg-b:'US Affiliates Rule'">
       <thead><tr><th class="cpair__var">&nbsp;</th><th class="cpair__reg">EU 9E503.l.</th><th class="cpair__reg">US Affiliates Rule</th></tr></thead>
       <tbody>
         <tr class="cross">
           <td class="cpair__var">Sequence</td>
-          <td colspan="2">US &rarr; EU entity &rarr; affiliate outside the Union &rarr; customer. Both rules reach the leg leaving the Union; only the US rule reaches the onward reexport. <span class="tag">In the structure</span></td>
+          <td colspan="2">US partner &rarr; Z &rarr; W &rarr; customer. The US rule reaches the leg into the Union, because Z is itself an affiliate. Both rules reach the leg leaving it. Only the US rule reaches the onward leg directly; the EU rule follows through licence conditions. <span class="tag">In the structure</span></td>
         </tr>
         <tr>
           <td class="cpair__var">Type</td>
