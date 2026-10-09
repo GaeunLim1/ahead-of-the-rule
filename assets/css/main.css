@@ -445,11 +445,11 @@ tr.is-off td { color: var(--muted); }
    The variable sits in the first column; each regime gets its own column. */
 .cpair { width: 100%; border-collapse: collapse; }
 .cpair th {
-  text-align: left; vertical-align: bottom; padding: 0 1rem 0.6rem 0;
-  font: 500 0.82rem/1.3 var(--mono); letter-spacing: 0.05em;
-  color: var(--muted); border-bottom: 1px solid var(--rule);
+  text-align: left; vertical-align: bottom; padding: 0 1rem 0.7rem 0;
+  font: 700 1rem/1.3 var(--body); letter-spacing: 0.01em;
+  color: var(--ink); border-bottom: 2px solid var(--accent);
 }
-.cpair th.cpair__reg { color: var(--accent); }
+.cpair th.cpair__reg { color: var(--accent-strong); }
 .cpair td {
   text-align: left; vertical-align: top; padding: 0.85rem 1rem 0.85rem 0;
   font-size: 0.95rem; line-height: 1.5; border-bottom: 1px solid var(--rule-faint);
@@ -1556,12 +1556,12 @@ details[open] > summary { margin-bottom: 0.6rem; }
   padding: clamp(1.25rem, 3.5vw, 2.25rem) 0 clamp(0.75rem, 2vw, 1.25rem);
 }
 .cov-mech__item {
-  flex: 1 1 13rem;
+  flex: 1 1 9.5rem;
   min-width: 10rem;
   display: flex;
   flex-direction: column;
   gap: 0.55rem;
-  padding: clamp(1.25rem, 3vw, 1.75rem);
+  padding: 1.1rem;
   border: 1px solid var(--rule);
   background: var(--plate);
 }
@@ -1570,7 +1570,7 @@ details[open] > summary { margin-bottom: 0.6rem; }
   border-style: dashed;
 }
 .cov-mech__num { font: 500 0.68rem/1 var(--mono); letter-spacing: 0.12em; color: var(--accent); }
-.cov-mech__name { font-family: var(--display); font-size: clamp(1.3rem, 1rem + 1.2vw, 1.65rem); }
+.cov-mech__name { font-family: var(--display); font-size: clamp(1.15rem, 0.9rem + 0.9vw, 1.4rem); }
 .cov-mech__note { color: var(--muted); font-size: 0.95rem; line-height: 1.5; }
 .cov-mech__shape {
   margin-top: auto; padding-top: 0.7rem;
@@ -1782,21 +1782,7 @@ details[open] > summary { margin-bottom: 0.6rem; }
 .cbody p { margin: 0 0 1rem; font-size: 1.06rem; line-height: 1.62; }
 .cbody p:last-child { margin-bottom: 0; }
 .cbody--close p { color: var(--ink-soft); }
-/* Subheading above a table: a label, not a title. Sans, small caps-style,
-   accent colour with a leading dash, so it reads as the tier between the step
-   title (serif, large, underlined) and the table's own row labels (serif,
-   regular, ink). */
-.csub {
-  display: flex; align-items: center; gap: 0.7rem;
-  font: 600 0.8125rem/1.3 var(--mono);
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin: 1.6rem 0 0.7rem;
-}
-.csub::before {
-  content: ""; flex: 0 0 1.25rem; height: 2px; background: var(--accent);
-}
+.csub { font: 600 1.24rem/1.3 var(--display); color: var(--ink); margin: 1.6rem 0 0.7rem; padding-left: 0.75rem; border-left: 3px solid var(--accent); }
 
 /* timeline */
 .ctimeline { width: 100%; border-collapse: collapse; }
@@ -1812,7 +1798,7 @@ details[open] > summary { margin-bottom: 0.6rem; }
 
 /* who meant what, and what happened instead */
 .cgap { width: 100%; border-collapse: collapse; }
-.cgap th { text-align: left; vertical-align: bottom; padding: 0 1rem 0.6rem 0; font: 500 0.82rem/1.3 var(--mono); letter-spacing: 0.07em; color: var(--muted); border-bottom: 1px solid var(--rule); }
+.cgap th { text-align: left; vertical-align: bottom; padding: 0 1rem 0.7rem 0; font: 700 1rem/1.3 var(--body); letter-spacing: 0.01em; color: var(--ink); border-bottom: 2px solid var(--accent); }
 .cgap td { text-align: left; vertical-align: top; padding: 0.85rem 1rem 0.85rem 0; font-size: 0.95rem; line-height: 1.55; border-bottom: 1px solid var(--rule-faint); color: var(--ink-soft); }
 .cgap td:first-child { font-family: var(--display); font-size: 1rem; color: var(--ink); white-space: nowrap; padding-right: 1.25rem; }
 .cgap tr:last-child td { border-bottom: none; }
@@ -1913,7 +1899,7 @@ details[open] > summary { margin-bottom: 0.6rem; }
 .cbody + .cpair, .cbody + .cgap { margin-top: 1.6rem; }
 .cpair + .cbody { margin-top: 1.6rem; }
 .cpair + .csub, .cgap + .csub, .cbody + .csub { margin-top: 2.6rem; }
-.csub + .cpair, .csub + .cgap { margin-top: 0.4rem; }
+.csub + .cpair, .csub + .cgap { margin-top: 1.1rem; }
 
 .cpair { table-layout: fixed; }
 .cpair th, .cpair td { padding-left: 0.75rem; padding-right: 1rem; }
@@ -1923,3 +1909,9 @@ details[open] > summary { margin-bottom: 0.6rem; }
   .cpair td { padding-left: 0.75rem; padding-right: 0.75rem; }
   .cpair td.cpair__var { width: auto; }
 }
+
+
+/* Section basis line ("Rests on ...") and single-column transaction table */
+.cbasis { margin: 0 0 1.1rem; font-size: 0.95rem; color: var(--muted); max-width: var(--measure); }
+.cbasis b { color: var(--accent-strong); font-weight: 600; margin-right: 0.35rem; }
+.c0 tr.cross td { background: transparent; }
