@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Where the Rules Meet: A Compliance Impact Framework"
-description: "For one transaction, see which rules attach, where they meet, and what to check again before a new rule takes effect."
+description: "For one export route, see which rules attach, where they meet, and what to check again before a new rule takes effect."
 permalink: /
 ---
 
@@ -11,8 +11,9 @@ permalink: /
     <div class="cov-block cov-lede">
       <span class="cov-eyebrow">THE FRAMEWORK</span>
       <h1 class="cov-title">Where the Rules Meet: A Compliance Impact Framework</h1>
-      <p class="cov-standfirst">For one transaction, see which rules attach, where they meet, and what to check again before a new rule takes effect.</p>
-      <p class="cov-standfirst"><a href="{{ '/review/' | relative_url }}">See a review: two rules on one transaction &rarr;</a></p>
+      <p class="cov-standfirst">For one export route, see which rules attach, where they meet, and what to check again before a new rule takes effect.</p>
+      <p class="cov-standfirst">Covers export controls, sanctions, and the tariff basics an exporter handles. Not covered: duty calculation, valuation, customs procedures, or import-country regulation.</p>
+      <p class="cov-standfirst"><a href="{{ '/review/' | relative_url }}">See a review: the US Affiliates Rule on one export route &rarr;</a></p>
     </div>
 
     <div class="cov-mech" aria-label="The five steps">
@@ -21,14 +22,14 @@ permalink: /
         <p class="cov-mech__num">STEP 0</p>
         <p class="cov-mech__name">Define the transaction</p>
         <p class="cov-mech__note">What moves, between whom, by which route, and when.</p>
-        <p class="cov-mech__shape">item &middot; chain &middot; parties &middot; route &middot; timing</p>
+        <p class="cov-mech__shape">item &middot; parties &middot; route &middot; timing</p>
       </div>
 
       <div class="cov-mech__item">
         <p class="cov-mech__num">STEP 1</p>
         <p class="cov-mech__name">Find the rules that attach</p>
-        <p class="cov-mech__note">Which rules reach the transaction, and which of them are changing.</p>
-        <p class="cov-mech__shape">rule &middot; status &middot; change &middot; target &middot; trigger</p>
+        <p class="cov-mech__note">Which export control, sanctions and tariff rules reach the route, and which of them are changing.</p>
+        <p class="cov-mech__shape">change &middot; export control &middot; sanctions &middot; tariff &middot; trigger</p>
       </div>
 
       <div class="cov-mech__item">
@@ -40,16 +41,16 @@ permalink: /
 
       <div class="cov-mech__item">
         <p class="cov-mech__num">STEP 3</p>
-        <p class="cov-mech__name">Point to what needs a second look</p>
-        <p class="cov-mech__note">What the firm's existing compliance programme has to check again.</p>
-        <p class="cov-mech__shape">classification &middot; licensing &middot; screening &middot; release &middot; records &middot; training</p>
+        <p class="cov-mech__name">Point to what needs a look</p>
+        <p class="cov-mech__note">What the firm's compliance programme has to cover.</p>
+        <p class="cov-mech__shape">classification &middot; licensing &middot; screening &middot; origin &middot; release &middot; records &middot; training</p>
       </div>
 
       <div class="cov-mech__item cov-mech__item--soft">
         <p class="cov-mech__num">STEP 4</p>
         <p class="cov-mech__name">Identify potential supply-chain risk</p>
         <p class="cov-mech__note">Where a disruption can arise, and what burden it brings.</p>
-        <p class="cov-mech__shape">licensing &middot; shipment &middot; counterparty &times; time &middot; labour &middot; foregone</p>
+        <p class="cov-mech__shape">licensing &middot; shipment &middot; counterparty &middot; cost &times; time &middot; labour &middot; foregone &middot; cost</p>
       </div>
 
     </div>
@@ -63,13 +64,12 @@ permalink: /
     <p class="cbasis"><b>Rests on</b> the transaction you set. An assumption unless the deal is real.</p>
 
     <table class="cgap">
-      <thead><tr><th>Variable</th><th>Question</th></tr></thead>
+      <thead><tr><th>Variable</th><th>Covers</th></tr></thead>
       <tbody>
-        <tr><td>Item</td><td>What moves: goods, software, or technology?</td></tr>
-        <tr><td>Chain</td><td>What are the exports and reexports from the first shipment to the final customer, and which entity acts at each?</td></tr>
-        <tr><td>Parties</td><td>Who takes part, and who owns them?</td></tr>
-        <tr><td>Route</td><td>Where does it start, pass through, and end?</td></tr>
-        <tr><td>Timing</td><td>When are the order, the shipment, and each rule's effective date, and which comes first?</td></tr>
+        <tr><td>Item</td><td>type (product, part, material, software, technology) &middot; origin</td></tr>
+        <tr><td>Parties</td><td>participants &middot; ownership</td></tr>
+        <tr><td>Route</td><td>legs &middot; actor &middot; terms</td></tr>
+        <tr><td>Timing</td><td>order &middot; shipment &middot; effective dates</td></tr>
       </tbody>
     </table>
   </div>
@@ -85,6 +85,7 @@ permalink: /
       <thead><tr><th>Variable</th><th>Question</th></tr></thead>
       <tbody>
         <tr><td>Rule</td><td>Which rules reach the transaction, changing or not?</td></tr>
+        <tr><td>Whose rule</td><td>The exporter's home country, a country whose rule follows the item, or the destination?</td></tr>
         <tr><td>Status</td><td>In force, or changing?</td></tr>
         <tr><td>Type of change</td><td>New, expanded, narrowed, clarified, or removed?</td></tr>
         <tr><td>Where it sits</td><td>A list entry, a definition, a licensing requirement, or a standard across lists?</td></tr>
@@ -93,14 +94,37 @@ permalink: /
       </tbody>
     </table>
 
-    <p class="csub">What it targets</p>
+    <p class="csub">Export control</p>
     <table class="cgap">
-      <thead><tr><th>Type</th><th>Measured on</th></tr></thead>
+      <thead><tr><th>Variable</th><th>Question</th></tr></thead>
       <tbody>
-        <tr><td>Item-based</td><td>The item's technical characteristics</td></tr>
-        <tr><td>Destination-based</td><td>The country it goes to</td></tr>
-        <tr><td>Party-based</td><td>Who the party is or who owns it</td></tr>
-        <tr><td>End-use-based</td><td>What it will be used for</td></tr>
+        <tr><td>List entry</td><td>Is the item on a control list, and under which entry?</td></tr>
+        <tr><td>Destination</td><td>Does that entry need a licence for this destination?</td></tr>
+        <tr><td>End use and end user</td><td>Does a catch-all reach the use or the user?</td></tr>
+        <tr><td>Reach</td><td>Does another country's control follow the item?</td></tr>
+      </tbody>
+    </table>
+
+    <p class="csub">Sanctions</p>
+    <table class="cgap">
+      <thead><tr><th>Variable</th><th>Question</th></tr></thead>
+      <tbody>
+        <tr><td>Country</td><td>Does any leg touch a sanctioned country or region?</td></tr>
+        <tr><td>Listed party</td><td>Is any party listed, or owned by one?</td></tr>
+        <tr><td>Sector</td><td>Does a sectoral measure reach the item, the party, or the activity?</td></tr>
+        <tr><td>Whose law</td><td>Which countries' sanctions reach the firm?</td></tr>
+      </tbody>
+    </table>
+
+    <p class="csub">Tariff</p>
+    <table class="cgap">
+      <thead><tr><th>Variable</th><th>Question</th></tr></thead>
+      <tbody>
+        <tr><td>HS code</td><td>Which heading does the item fall under?</td></tr>
+        <tr><td>Origin</td><td>Which origin will the importing country assign?</td></tr>
+        <tr><td>Standard rate</td><td>What is the MFN rate?</td></tr>
+        <tr><td>Preferential</td><td>Does an FTA apply, and can origin be proven?</td></tr>
+        <tr><td>Additional</td><td>Does a country- or product-specific duty apply?</td></tr>
       </tbody>
     </table>
 
@@ -184,6 +208,7 @@ permalink: /
         <tr><td>Same fact, two lists</td><td>One fact, two tests; answers can differ</td></tr>
         <tr><td>Handoff</td><td>One rule creates the condition for the other</td></tr>
         <tr><td>Conflict</td><td>Complying with one breaches the other</td></tr>
+        <tr><td>Incentive</td><td>One rule gives a reason to change the route or origin that another rule reads</td></tr>
       </tbody>
     </table>
   </div>
@@ -191,16 +216,17 @@ permalink: /
 
 <section class="csection" id="review">
   <div class="chero__shell">
-    <p class="ceyebrow">3 &middot; Point to what needs a second look</p>
+    <p class="ceyebrow">3 &middot; Point to what needs a look</p>
     <p class="cbasis"><b>Rests on</b> your reading of Steps 1 and 2.</p>
 
     <table class="cgap">
-      <thead><tr><th>Check again</th><th>When the change brings</th></tr></thead>
+      <thead><tr><th>Check</th><th>When the rules bring</th></tr></thead>
       <tbody>
         <tr><td>Classification</td><td>A new or amended list entry</td></tr>
         <tr><td>Licence determination</td><td>A changed licence requirement or policy</td></tr>
-        <tr><td>Party screening</td><td>A new or extended party test</td></tr>
-        <tr><td>Red flags and catch-all</td><td>A new knowledge trigger</td></tr>
+        <tr><td>Party screening</td><td>A new or extended party test, or a sanctions designation</td></tr>
+        <tr><td>Origin documentation</td><td>A new tariff layer or preferential rule</td></tr>
+        <tr><td>Red flags and catch-all</td><td>A new knowledge trigger, or a route or origin request that matches an incentive</td></tr>
         <tr><td>Hold and release</td><td>A change taking effect mid-transaction</td></tr>
         <tr><td>Technology release</td><td>A new controlled activity</td></tr>
         <tr><td>Group instructions</td><td>A duty that falls on an affiliate</td></tr>
@@ -222,7 +248,7 @@ permalink: /
         <tr>
           <td rowspan="3">Licensing</td>
           <td>Licence path</td>
-          <td>What routes to a lawful shipment remain?</td>
+          <td>What paths to a lawful shipment remain?</td>
           <td>Labour &middot; Foregone</td>
         </tr>
         <tr>
@@ -248,7 +274,7 @@ permalink: /
         </tr>
         <tr>
           <td>Rerouting</td>
-          <td>Does a new route meet another rule?</td>
+          <td>Does a new route meet another rule, or start to look like circumvention?</td>
           <td>Labour &middot; Time</td>
         </tr>
         <tr>
@@ -262,6 +288,12 @@ permalink: /
           <td>Does a substitute meet the same test?</td>
           <td>Labour &middot; Foregone</td>
         </tr>
+        <tr>
+          <td rowspan="1">Cost</td>
+          <td>Duty exposure</td>
+          <td>Who bears a new duty under the agreed terms?</td>
+          <td>Cost</td>
+        </tr>
       </tbody>
     </table>
 
@@ -272,6 +304,7 @@ permalink: /
         <tr><td>Time</td><td>Waiting</td></tr>
         <tr><td>Labour</td><td>Work added to each transaction</td></tr>
         <tr><td>Foregone</td><td>Sales, markets, relationships lost</td></tr>
+        <tr><td>Cost</td><td>Duty borne or passed back</td></tr>
       </tbody>
     </table>
 
@@ -291,7 +324,8 @@ permalink: /
             BIS, <a href="https://www.bis.gov/sites/default/files/documents/ECP_0.pdf" target="_blank" rel="noopener">Export Compliance Guidelines: The Elements of an Effective Export Compliance Program</a>.<br>
             BIS, <a href="https://www.bis.gov/articles/know-your-customer-guidance" target="_blank" rel="noopener">Know Your Customer Guidance</a> and <a href="https://www.bis.gov/title-15/subtitle-b/chapter-vii/subchapter-c/part-732" target="_blank" rel="noopener">Red Flags, Supplement No. 3 to Part 732</a>.<br>
             European Commission, <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32019H1318" target="_blank" rel="noopener">Recommendation (EU) 2019/1318 on internal compliance programmes for dual-use trade controls</a>.<br>
-            European Union, <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32021R0821" target="_blank" rel="noopener">Regulation (EU) 2021/821</a> (Article 2 definitions; Article 4 catch-all).
+            European Union, <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32021R0821" target="_blank" rel="noopener">Regulation (EU) 2021/821</a> (Article 2 definitions; Article 4 catch-all).<br>
+            OFAC, <a href="https://ofac.treasury.gov/media/16331/download" target="_blank" rel="noopener">A Framework for OFAC Compliance Commitments</a>.
           </td>
         </tr>
       </tbody>
