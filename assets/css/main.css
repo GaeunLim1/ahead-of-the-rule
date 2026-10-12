@@ -1874,7 +1874,7 @@ details[open] > summary { margin-bottom: 0.6rem; }
 }
 
 /* masthead navigation: the frame and the worked analysis */
-.masthead__nav { display: flex; gap: 1.4rem; }
+.masthead__nav { display: flex; flex-wrap: wrap; gap: 0.6rem 1.4rem; }
 .masthead__nav a {
   font: 500 0.8125rem/1 var(--mono);
   letter-spacing: 0.04em;
