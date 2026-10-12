@@ -16,8 +16,8 @@
   --plate:       #F5F7F9;
   --plate-sunk:  #DBE0E6;
   --ink:         #171B21;
-  --ink-soft:    #2A313A;
-  --muted:       #535B65;
+  --ink-soft:    #1C2229;
+  --muted:       #3D444D;
   --rule:        #AAB2BC;
   --rule-faint:  #D6DBE1;
 
@@ -1801,7 +1801,7 @@ details[open] > summary { margin-bottom: 0.6rem; }
 /* who meant what, and what happened instead */
 .cgap { width: 100%; border-collapse: collapse; }
 .cgap th { text-align: left; vertical-align: bottom; padding: 0 1rem 0.7rem 0; font: 700 1rem/1.3 var(--body); letter-spacing: 0.01em; color: var(--ink); border-bottom: 1px solid var(--head-rule); }
-.cgap td { text-align: left; vertical-align: top; padding: 0.85rem 1rem 0.85rem 0; font-size: 0.95rem; line-height: 1.55; border-bottom: 1px solid var(--rule-faint); color: var(--ink-soft); }
+.cgap td { text-align: left; vertical-align: top; padding: 0.85rem 1rem 0.85rem 0; font-size: 1rem; line-height: 1.55; border-bottom: 1px solid var(--rule-faint); color: var(--ink); }
 .cgap td:first-child { font-family: var(--display); font-size: 1rem; color: var(--ink); white-space: nowrap; padding-right: 1.25rem; }
 .cgap tr:last-child td { border-bottom: none; }
 
