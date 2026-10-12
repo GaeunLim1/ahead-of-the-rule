@@ -1,6 +1,6 @@
 title: Ahead of the Rule
 description: >-
-  A rule changes. Follow it through one transaction, leg by leg, to where it reaches the exporter.
+  A framework for tracing an export control change through a single transaction, from the text of the rule to what the exporter has to do.
 lang: en
 
 baseurl: /ahead-of-the-rule
