@@ -1,10 +1,10 @@
 {%- comment -%}
   The shared window, 1 Sep 2026 to 31 Jan 2027 (153 days).
   Positions are percent of that span: day index / 153.
-  14 Sep 8.5 · 14 Oct 28.1 · 10 Nov 45.8 · 14 Nov 48.4 · 27 Nov 56.9 · 10 Jan 85.6
-  Update "as of" and the today line when a status changes.
+  14 Sep 8.5 · 10 Nov 45.8 · 14 Nov 48.4 · 27 Nov 56.9 · 10 Jan 85.6
+  Update the "as of" caption and the notes when a status changes.
 {%- endcomment -%}
-<figure class="window" style="--today:28.1%" aria-labelledby="window-cap">
+<figure class="window" aria-labelledby="window-cap">
   <div class="window__grid" aria-hidden="true">
     <span style="--at:0%">Sep</span>
     <span style="--at:19.6%">Oct</span>
@@ -12,7 +12,6 @@
     <span style="--at:59.5%">Dec</span>
     <span style="--at:79.7%">Jan 2027</span>
   </div>
-  <div class="window__today" style="--at:var(--today)" aria-hidden="true"><span>Today, 14 Oct</span></div>
 
   <div class="lane lane--eu">
     <p class="lane__name">EU 9E503.l</p>
