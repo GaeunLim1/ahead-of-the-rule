@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+<title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
 <meta name="description" content="{{ page.description | default: site.description }}">
 <meta property="og:type" content="website">
-<meta property="og:title" content="{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}">
+<meta property="og:title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}">
 <meta property="og:description" content="{{ page.description | default: site.description }}">
 <meta property="og:url" content="{{ site.url }}{{ page.url | relative_url }}">
 {%- assign og_image = page.image | default: '/assets/og-cover.png' -%}
@@ -14,7 +14,7 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="627">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}">
+<meta name="twitter:title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}">
 <meta name="twitter:description" content="{{ page.description | default: site.description }}">
 <meta name="twitter:image" content="{{ site.url }}{{ og_image | relative_url }}">
 <link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
@@ -22,18 +22,18 @@
 <link rel="apple-touch-icon" href="{{ '/assets/apple-touch-icon.png' | relative_url }}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<header class="masthead">
-  <div class="shell masthead__inner">
-    <nav class="masthead__nav" aria-label="Pages">
-      <a href="{{ '/' | relative_url }}"{% if page.url == '/' or page.url == '/index.html' %} aria-current="page"{% endif %}>The framework</a>
-      <a href="{{ '/review/' | relative_url }}"{% if page.url == '/review/' %} aria-current="page"{% endif %}>Review: EU 9E503</a>
-      <a href="{{ '/review/eu-9e503/' | relative_url }}"{% if page.url == '/review/eu-9e503/' %} aria-current="page"{% endif %}>Review: EU 9E503</a>
+<header class="top">
+  <div class="wrap top__inner">
+    <a class="mark" href="{{ '/' | relative_url }}">Ahead of the Rule</a>
+    <nav class="top__nav" aria-label="Studies">
+      <a href="{{ '/compare/' | relative_url }}"{% if page.url == '/compare/' %} aria-current="page"{% endif %}>Three rules compared</a>
+      <a href="{{ '/trace/eu-9e503/' | relative_url }}"{% if page.url == '/trace/eu-9e503/' %} aria-current="page"{% endif %}>One transaction traced</a>
     </nav>
   </div>
 </header>
@@ -43,18 +43,14 @@
 </main>
 
 <footer class="foot">
-  <div class="shell">
-    <div class="byline byline--foot">
-      <div>
-        <b>{{ site.data.author.name }}</b>
-      </div>
-      <ul>
-        {% for link in site.data.author.links %}
-        <li><a href="{{ link.url }}" rel="me noopener">{{ link.label }}</a></li>
-        {% endfor %}
-      </ul>
-    </div>
-    <p>Content CC BY 4.0; site code MIT.</p>
+  <div class="wrap foot__inner">
+    <p class="foot__name">{{ site.data.author.name }}</p>
+    <ul class="foot__links">
+      {% for link in site.data.author.links %}
+      <li><a href="{{ link.url }}" rel="me noopener">{{ link.label }}</a></li>
+      {% endfor %}
+    </ul>
+    <p class="foot__note">Analysis, not legal advice. Check the official texts for the date of any transaction. Content CC BY 4.0; site code MIT.</p>
   </div>
 </footer>
 </body>

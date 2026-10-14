@@ -1,0 +1,50 @@
+{%- comment -%}
+  The shared window, 1 Sep 2026 to 31 Jan 2027 (153 days).
+  Positions are percent of that span: day index / 153.
+  14 Sep 8.5 · 14 Oct 28.1 · 10 Nov 45.8 · 14 Nov 48.4 · 27 Nov 56.9 · 10 Jan 85.6
+  Update "as of" and the today line when a status changes.
+{%- endcomment -%}
+<figure class="window" style="--today:28.1%" aria-labelledby="window-cap">
+  <div class="window__grid" aria-hidden="true">
+    <span style="--at:0%">Sep</span>
+    <span style="--at:19.6%">Oct</span>
+    <span style="--at:39.9%">Nov</span>
+    <span style="--at:59.5%">Dec</span>
+    <span style="--at:79.7%">Jan 2027</span>
+  </div>
+  <div class="window__today" style="--at:var(--today)" aria-hidden="true"><span>Today, 14 Oct</span></div>
+
+  <div class="lane lane--eu">
+    <p class="lane__name">EU 9E503.l</p>
+    <div class="lane__track" aria-hidden="true">
+      <span class="seg seg--wait" style="--from:8.5%;--to:48.4%"></span>
+      <span class="dot" style="--at:8.5%"></span>
+      <span class="dot dot--open" style="--at:48.4%"></span>
+    </div>
+    <p class="lane__note">Adopted 14 Sep. In scrutiny; publication expected around mid-November, not fixed.</p>
+  </div>
+
+  <div class="lane lane--us">
+    <p class="lane__name">US Affiliates Rule</p>
+    <div class="lane__track" aria-hidden="true">
+      <span class="seg seg--stay" style="--from:0%;--to:45.8%"></span>
+      <span class="seg seg--maybe" style="--from:45.8%;--to:85.6%"></span>
+      <span class="dot" style="--at:45.8%"></span>
+      <span class="dot dot--open" style="--at:85.6%"></span>
+    </div>
+    <p class="lane__note">Stayed. Returns 10 Nov unless BIS acts; a stay to 10 Jan is announced but not yet published.</p>
+  </div>
+
+  <div class="lane lane--cn">
+    <p class="lane__name">China rare earths</p>
+    <div class="lane__track" aria-hidden="true">
+      <span class="seg seg--stay" style="--from:0%;--to:45.8%"></span>
+      <span class="seg seg--maybe" style="--from:45.8%;--to:85.6%"></span>
+      <span class="dot" style="--at:45.8%"></span>
+      <span class="dot dot--open" style="--at:85.6%"></span>
+    </div>
+    <p class="lane__note">Suspended. Suspension ends 10 Nov unless MOFCOM acts; the same extension to 10 Jan is reported.</p>
+  </div>
+
+  <figcaption id="window-cap" class="window__cap">Status as of 14 October 2026. Solid marks are fixed in law; open marks are expected.</figcaption>
+</figure>
