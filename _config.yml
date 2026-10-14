@@ -7,15 +7,9 @@ baseurl: /ahead-of-the-rule
 url: https://gaeunlim1.github.io
 
 # GitHub Pages builds this with its own Jekyll. No Actions workflow required.
-plugins:
-  - jekyll-redirect-from
 
 markdown: kramdown
 kramdown:
   input: GFM
   hard_wrap: false
 
-exclude:
-  - README.md
-  - docs/
-  - scripts/

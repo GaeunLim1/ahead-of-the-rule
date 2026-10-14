@@ -1,8 +1,4 @@
-# Single source for the author block. The footer and the landing byline both read
-# this file, so the name appears in one place and cannot drift between pages.
-#
-# CITATION.cff has to repeat these values: it is a static file GitHub parses on
-# its own and cannot read _data/. Change both together.
+# Author block for the footer. Change the name or links here only.
 name: Gaeun Lim
 links:
   - label: LinkedIn
