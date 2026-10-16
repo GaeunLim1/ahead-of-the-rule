@@ -1,0 +1,60 @@
+{%- comment -%}
+  Span: 15 Sep 2026 to 31 Jan 2027 (138 days). Positions are day index / 138.
+  1 Oct 11.59 · 15 Oct 21.74 · 1 Nov 34.06 · 10 Nov 40.58 · 27 Nov 52.9
+  1 Dec 55.8 · 1 Jan 78.26 · 10 Jan 84.78
+  Move the "today" line and update the notes when a notice is published.
+  Pass lang="ko" for the Korean text.
+{%- endcomment -%}
+{%- assign ko = false -%}{%- if include.lang == 'ko' -%}{%- assign ko = true -%}{%- endif -%}
+<figure class="tl" aria-labelledby="tl-cap">
+  <div class="tl__body">
+    <div class="tl__months" aria-hidden="true">
+      <span style="left:11.59%">{% if ko %}10월{% else %}Oct{% endif %}</span>
+      <span style="left:34.06%">{% if ko %}11월{% else %}Nov{% endif %}</span>
+      <span style="left:55.8%">{% if ko %}12월{% else %}Dec{% endif %}</span>
+      <span style="left:78.26%">{% if ko %}2027년 1월{% else %}Jan 2027{% endif %}</span>
+    </div>
+    <div class="tl__gap" style="--from:40.58;--to:84.78" aria-hidden="true">
+      <p class="tl__gap-label">{% if ko %}법적 기한과 발표된 기한 사이{% else %}Between the legal date and the announced one{% endif %}</p>
+    </div>
+    <div class="tl__today" style="--at:21.74" aria-hidden="true"><span>{% if ko %}10.15{% else %}15 Oct{% endif %}</span></div>
+
+    <div class="lane lane--us">
+      <p class="lane__name">{% if ko %}미국 Affiliates Rule{% else %}US Affiliates Rule{% endif %}</p>
+      <div class="lane__track" aria-hidden="true">
+        <span class="seg seg--held" style="--from:0%;--to:40.58%"></span>
+        <span class="seg seg--said" style="--from:40.58%;--to:84.78%"></span>
+        <span class="dot" style="--at:40.58%"></span>
+        <span class="dot dot--open" style="--at:84.78%"></span>
+      </div>
+      <p class="lane__note">{% if ko %}유예 중. BIS 공고가 없으면 2026.11.10 복귀. 2027.1.10까지 연장은 발표만 있고 공고 없음.{% else %}Stayed. Returns on 10 Nov 2026 without a BIS notice. An extension to 10 Jan 2027 is announced, not published.{% endif %}</p>
+    </div>
+
+    <div class="lane lane--cn">
+      <p class="lane__name">{% if ko %}중국 61호{% else %}China, Announcement 61{% endif %}</p>
+      <div class="lane__track" aria-hidden="true">
+        <span class="seg seg--held" style="--from:0%;--to:40.58%"></span>
+        <span class="seg seg--said" style="--from:40.58%;--to:84.78%"></span>
+        <span class="dot" style="--at:40.58%"></span>
+        <span class="dot dot--open" style="--at:84.78%"></span>
+      </div>
+      <p class="lane__note">{% if ko %}70호로 유예 중. 유예는 2026.11.10 종료. 같은 연장이 확인됐지만 희토류를 명시한 공고 없음.{% else %}Suspended by Announcement 70, which ends on 10 Nov 2026. The same extension is confirmed; no notice names rare earths.{% endif %}</p>
+    </div>
+
+    <div class="lane lane--cn">
+      <p class="lane__name">{% if ko %}중국 46/2024 2조{% else %}China, 46/2024 clause 2{% endif %}</p>
+      <div class="lane__track" aria-hidden="true">
+        <span class="seg seg--held" style="--from:0%;--to:52.9%"></span>
+        <span class="dot" style="--at:52.9%"></span>
+      </div>
+      <p class="lane__note">{% if ko %}별도 유예, 2026.11.27 종료. 이번 연장에 포함되는지 미확인.{% else %}Separate suspension, ends on 27 Nov 2026. Not known whether the extension covers it.{% endif %}</p>
+    </div>
+  </div>
+
+  <p class="tl__key" aria-hidden="true">
+    <span><i class="k k--held"></i>{% if ko %}공고로 유예 중{% else %}Paused by a published notice{% endif %}</span>
+    <span><i class="k k--said"></i>{% if ko %}발표만 있음{% else %}Announced only{% endif %}</span>
+    <span><i class="k k--gap"></i>{% if ko %}공백 구간{% else %}The gap{% endif %}</span>
+  </p>
+  <figcaption id="tl-cap" class="sr">{% if ko %}두 규제의 유예는 법적으로 2026년 11월 10일에 끝나고, 2027년 1월 10일까지 연장은 발표만 됐다.{% else %}Both pauses end in law on 10 November 2026; an extension to 10 January 2027 has been announced but not published.{% endif %}</figcaption>
+</figure>

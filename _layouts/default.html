@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+{%- assign lang = page.lang | default: site.lang -%}
+<html lang="{{ lang }}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
 <meta name="description" content="{{ page.description | default: site.description }}">
-<meta property="og:type" content="website">
+<meta property="og:type" content="{% if page.nav %}article{% else %}website{% endif %}">
 <meta property="og:title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}">
 <meta property="og:description" content="{{ page.description | default: site.description }}">
 <meta property="og:url" content="{{ site.url }}{{ page.url | relative_url }}">
-{%- assign og_image = page.image | default: '/assets/og-cover.png' -%}
+{%- assign og_image = page.image | default: '/assets/og-cover.png' %}
 <meta property="og:image" content="{{ site.url }}{{ og_image | relative_url }}">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="627">
@@ -22,15 +23,22 @@
 <link rel="apple-touch-icon" href="{{ '/assets/apple-touch-icon.png' | relative_url }}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=Noto+Serif+KR:wght@500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
+<a class="skip" href="#main">{% if lang == 'ko' %}본문으로 건너뛰기{% else %}Skip to content{% endif %}</a>
 
 <header class="top">
   <div class="wrap top__inner">
     <a class="mark" href="{{ '/' | relative_url }}">Ahead of the Rule</a>
+    <nav aria-label="Site">
+      <ul class="nav">
+        {%- for item in site.data.nav %}
+        <li><a href="{{ item.url | relative_url }}"{% if page.nav == item.key %} aria-current="page"{% endif %}>{{ item.label }}</a></li>
+        {%- endfor %}
+      </ul>
+    </nav>
   </div>
 </header>
 
@@ -42,9 +50,9 @@
   <div class="wrap foot__inner">
     <p class="foot__name">{{ site.data.author.name }}</p>
     <ul class="foot__links">
-      {% for link in site.data.author.links %}
+      {%- for link in site.data.author.links %}
       <li><a href="{{ link.url }}" rel="me noopener">{{ link.label }}</a></li>
-      {% endfor %}
+      {%- endfor %}
     </ul>
   </div>
 </footer>

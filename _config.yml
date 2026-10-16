@@ -1,6 +1,6 @@
 title: Ahead of the Rule
 description: >-
-  Export control analysis by Gaeun Lim: a new EU technology entry, the US Affiliates Rule and China's rare-earth controls, compared in one window.
+  Export control analysis by Gaeun Lim.
 lang: en
 
 baseurl: /ahead-of-the-rule
@@ -13,3 +13,5 @@ kramdown:
   input: GFM
   hard_wrap: false
 
+exclude:
+  - LICENSE

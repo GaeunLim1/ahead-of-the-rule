@@ -1,0 +1,7 @@
+# Header links. "key" matches the nav value in each page's front matter.
+- key: affiliates
+  label: Affiliates Rule and Announcement 61
+  url: /affiliates/
+- key: eu
+  label: EU 9E503.l
+  url: /eu-9e503/
