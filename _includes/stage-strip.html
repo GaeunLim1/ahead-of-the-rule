@@ -1,0 +1,7 @@
+{%- comment -%} Stages 1 to 3 in short form for one case. Pass case="affiliates" | "ann61" | "eu". {%- endcomment -%}
+{%- assign c = site.data.stages.cases | where: "key", include.case | first -%}
+<dl class="l1 j-{{ c.j }}" aria-label="Stages 1 to 3">
+  {%- for r in site.data.stages.strip %}
+  <div><dt>{{ r.label }}</dt><dd>{{ c[r.key] }}</dd></div>
+  {%- endfor %}
+</dl>

@@ -1,16 +1,59 @@
 ---
 layout: default
-description: "Export control analysis by Gaeun Lim."
+description: "How three export controls reach the data centre supply chain: the US Affiliates Rule, China's Announcement 61 and the EU's 2026 dual-use update. Export control analysis by Gaeun Lim."
 permalink: /
 ---
 
 <section class="home">
   <div class="wrap">
-    <h1 class="home__title">Ahead of the Rule</h1>
-    <p class="home__by">Export control analysis by Gaeun Lim</p>
+    <h1 class="home__title">Three export controls and the data centre supply chain</h1>
+    <p class="home__by">Export control analysis by Gaeun Lim. As of <time datetime="2026-10-15">15 October 2026</time>.</p>
+
+    <h2 class="home__h2">Where each rule reaches</h2>
+    <table class="tbl map">
+      <thead><tr><th scope="col">Data centre supply chain</th><th scope="col">Rule</th><th scope="col">How it is caught</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Compute: equipment and parts other than advanced chips</th><td class="j-us" data-label="Rule"><a href="{{ '/affiliates/' | relative_url }}">US Affiliates Rule</a></td><td data-label="Caught by">Ownership</td></tr>
+        <tr><th scope="row">Compute: data centre ICs and servers</th><td class="j-eu" data-label="Rule"><a href="{{ '/eu-2026-update/' | relative_url }}">EU 3A501.a.16.b</a></td><td data-label="Caught by">Product movement</td></tr>
+        <tr><th scope="row">Compute: chipmaking (sputtering targets)</th><td class="j-cn" data-label="Rule"><a href="{{ '/announcement-61/' | relative_url }}">China Ann. 61</a></td><td data-label="Caught by">Material content</td></tr>
+        <tr><th scope="row">Facilities: HDDs, cooling fans</th><td class="j-cn" data-label="Rule"><a href="{{ '/announcement-61/' | relative_url }}">China Ann. 61</a></td><td data-label="Caught by">Material content</td></tr>
+        <tr><th scope="row">Power: gas turbines</th><td class="j-eu" data-label="Rule"><a href="{{ '/eu-2026-update/' | relative_url }}">EU 9E503.l</a></td><td data-label="Caught by">Technology transfer</td></tr>
+      </tbody>
+    </table>
+
+    <h2 class="home__h2">Stages 1 to 3</h2>
+    <table class="tbl l1-table">
+      <thead>
+        <tr>
+          <th scope="col"><span class="sr">Stage</span></th>
+          {%- for c in site.data.stages.cases %}
+          <th scope="col" class="j j-{{ c.j }}"><a href="{{ c.url | relative_url }}">{{ c.name }}</a></th>
+          {%- endfor %}
+        </tr>
+      </thead>
+      <tbody>
+        {%- for r in site.data.stages.rows %}
+        <tr>
+          <th scope="row">{{ r.label }}</th>
+          {%- for c in site.data.stages.cases %}
+          <td class="j-{{ c.j }}" data-label="{{ c.name }}">{{ c[r.key] }}</td>
+          {%- endfor %}
+        </tr>
+        {%- endfor %}
+      </tbody>
+    </table>
+    <dl class="defs">
+      <div><dt>Time gap</dt><dd>The extension is announced but not yet in a published notice.</dd></div>
+      <div><dt>Supply disruption</dt><dd>The controlled material has few sources outside the controlling country.</dd></div>
+      <div><dt>Space gap</dt><dd>One jurisdiction controls an item that others do not, so the control stops at its border.</dd></div>
+      <div><dt>Divergent classification</dt><dd>The same item is controlled in one jurisdiction and not in another.</dd></div>
+    </dl>
+
+    <h2 class="home__h2">Stage 4: firm impact, by rule</h2>
     <ul class="home__list">
-      <li><a href="{{ '/affiliates/' | relative_url }}">US Affiliates Rule and China Announcement 61</a></li>
-      <li><a href="{{ '/eu-9e503/' | relative_url }}">EU 9E503.l and five national lists</a></li>
+      {%- for c in site.data.stages.cases %}
+      <li><a href="{{ c.url | relative_url }}">{{ c.name }}</a></li>
+      {%- endfor %}
     </ul>
   </div>
 </section>

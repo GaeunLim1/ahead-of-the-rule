@@ -1,0 +1,45 @@
+{%- comment -%}
+  The two rules paused under the US-China truce. Used on both case pages.
+  Span: 15 Sep 2026 to 31 Jan 2027 (138 days). Positions are day index / 138.
+  1 Oct 11.59, 15 Oct 21.74, 1 Nov 34.06, 10 Nov 40.58, 27 Nov 52.9,
+  1 Dec 55.8, 1 Jan 78.26, 10 Jan 84.78.
+  Move the "today" line and update the notes when a notice is published.
+{%- endcomment -%}
+<figure class="tl" aria-labelledby="tl-cap">
+  <div class="tl__body">
+    <div class="tl__months" aria-hidden="true">
+      <span style="left:11.59%">Oct</span>
+      <span style="left:34.06%">Nov</span>
+      <span style="left:55.8%">Dec</span>
+      <span style="left:78.26%">Jan 2027</span>
+    </div>
+    <div class="tl__gap" style="--from:40.58;--to:84.78" aria-hidden="true">
+      <p class="tl__gap-label">Between the legal date and the announced one</p>
+    </div>
+    <div class="tl__today" style="--at:21.74" aria-hidden="true"><span>15 Oct</span></div>
+    <div class="lane lane--us">
+      <p class="lane__name">US Affiliates Rule</p>
+      <div class="lane__track" aria-hidden="true">
+        <span class="seg seg--held" style="--from:0%;--to:40.58%"></span>
+        <span class="seg seg--said" style="--from:40.58%;--to:84.78%"></span>
+        <span class="dot" style="--at:40.58%"></span>
+        <span class="dot dot--open" style="--at:84.78%"></span>
+      </div>
+    </div>
+    <div class="lane lane--cn">
+      <p class="lane__name">China, Ann. 61</p>
+      <div class="lane__track" aria-hidden="true">
+        <span class="seg seg--held" style="--from:0%;--to:40.58%"></span>
+        <span class="seg seg--said" style="--from:40.58%;--to:84.78%"></span>
+        <span class="dot" style="--at:40.58%"></span>
+        <span class="dot dot--open" style="--at:84.78%"></span>
+      </div>
+    </div>
+  </div>
+  <p class="tl__key" aria-hidden="true">
+    <span><i class="k k--held"></i>Paused by a published notice</span>
+    <span><i class="k k--said"></i>Announced only</span>
+    <span><i class="k k--gap"></i>The gap</span>
+  </p>
+  <figcaption id="tl-cap" class="sr">Both pauses end in law on 10 November 2026; an extension to 10 January 2027 has been announced but not published.</figcaption>
+</figure>
