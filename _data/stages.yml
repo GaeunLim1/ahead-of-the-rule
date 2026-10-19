@@ -19,7 +19,7 @@ rows:
     label: What it creates
 strip:
   - key: link_short
-    label: Data centre link
+    label: Chip chain link
   - key: mechanism
     label: Mechanism
   - key: dependency
@@ -33,41 +33,27 @@ cases:
     name: US Affiliates Rule
     url: /affiliates/
     j: us
-    link: Supply of EAR items to data centres owned by listed parties
-    link_short: Compute, other than advanced chips
+    link: Spares, consumables and service for fabs owned by listed parties; dealings with listed chipmakers' subsidiaries abroad
+    link_short: Spares and service, not leading-edge tools
     dependency: Not applicable
     mechanism: Ownership
-    scope: 50% or more owned by listed parties, alone or together
+    scope: 50% or more owned by listed parties, directly or indirectly, alone or together
     timing: Legal date 10 Nov 2026; announced 10 Jan 2027
     timing_short: 10 Nov 2026 in law; 10 Jan 2027 announced
     jurisdiction: Linked to China Ann. 61
-    uncertain: Overlap with the licence requirement for D:5-headquartered firms
-    creates: Time gap
+    uncertain: Overlap with existing US controls on chipmaking in China
+    creates: Time gap and information gap
   - key: ann61
     name: China Announcement 61
     url: /announcement-61/
     j: cn
-    link: HDD and fan magnets containing Tb or Dy; rare-earth sputtering targets for chips
-    link_short: Facilities and chipmaking
+    link: Tb, Dy and SmCo magnets in vacuum pumps, wafer robots, linear motors and cathodes; rare-earth sputtering targets
+    link_short: Equipment parts and deposition targets
     dependency: High
     mechanism: Material content
-    scope: 0.1% of value; parts and modules containing Tb or Dy magnets; any independently usable item built from them
+    scope: 0.1% of value; parts and modules containing listed magnets; case by case for logic at 14 nm or below and memory at 256 layers or more
     timing: Same as the Affiliates Rule, linked
     timing_short: 10 Nov 2026 in law; 10 Jan 2027 announced
     jurisdiction: Linked to the US Affiliates Rule
-    uncertain: How to compute 0.1%
-    creates: Time gap and supply disruption
-  - key: eu
-    name: EU 2026 update
-    url: /eu-2026-update/
-    j: eu
-    link: Data centre ICs (3A501.a.16.b); gas turbine compressor technology (9E503.l)
-    link_short: Compute and power
-    dependency: Low
-    mechanism: Product movement; technology transfer
-    scope: ICs with TPP 1,600 to 6,000 and density 5.92 or more, if designed for data centres; compressor technology meeting l.1 and l.2
-    timing: Adopted 14 Sep 2026; in force after publication, around mid-Nov
-    timing_short: In force after publication, around mid-Nov 2026
-    jurisdiction: Korea controls these ICs only from TPP 6,000; no list besides the EU has 9E503.l
-    uncertain: '"Designed for use in data centres"; "feedback"'
-    creates: Space gap and divergent classification
+    uncertain: Whether 0.1% is measured on the module or on the whole tool
+    creates: Time gap, information gap and supply disruption

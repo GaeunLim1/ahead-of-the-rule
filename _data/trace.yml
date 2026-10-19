@@ -1,0 +1,118 @@
+# Stage 5: the information trace. One chain, two rules.
+# Drawn on the home page (both rules) and as a table on each case page.
+# Edit here only.
+#
+# state:  out    = not caught by this rule at this node
+#         sees   = liable, and holds what it needs
+#         blind  = liable, but the information sits elsewhere (painted as a gap)
+#         holds  = holds the information, carries no export liability for it
+# gaps:   keys from "types" below
+
+nodes:
+  - key: magnet
+    name: Magnet maker
+    eg: Outside China, using Chinese Tb or Dy
+  - key: subsystem
+    name: Subsystem maker
+    eg: Vacuum pumps, wafer robots, linear motors, cathodes
+  - key: tool
+    name: Equipment maker
+    eg: Deposition, etch and inspection tools
+  - key: trader
+    name: Distributor, trader, forwarder
+    eg: Spares, resale and shipping
+  - key: fab
+    name: Fab
+    eg: The end user
+
+states:
+  out: Not caught here
+  sees: Liable, can see
+  blind: Liable, cannot see
+  holds: Holds it, not liable
+
+types:
+  - key: structural
+    name: Structural
+    def: The information exists but sits with another firm, such as an unpublished ownership chain or a bill of materials several tiers up.
+  - key: institutional
+    name: Institutional
+    def: The rule itself is unclear, such as how 0.1% is measured, who counts as a user of concern, or a pause extended without a notice.
+  - key: intentional
+    name: Intentional
+    def: Someone hides it, through shell companies, shared office addresses or resellers in between.
+  - key: conflicting
+    name: Conflicting
+    def: Giving the information to one government cuts against the other, such as process data sent to MOFCOM or a cut-off barred by China's blocking rules.
+
+rules:
+  - key: affiliates
+    name: US Affiliates Rule
+    url: /affiliates/
+    j: us
+    info: Who owns the buyer
+    flows:
+      - dir: up
+        label: Ownership has to travel up, from the fab to whoever ships
+    cells:
+      magnet:
+        state: out
+        needs: Rarely ships items subject to the EAR
+        held: ""
+        gaps: []
+      subsystem:
+        state: blind
+        needs: Owners of the tool makers it supplies, when its parts are subject to the EAR
+        held: The tool maker
+        gaps: [structural]
+      tool:
+        state: blind
+        needs: The fab's full ownership chain, direct, indirect and combined
+        held: The fab and its local agents
+        gaps: [structural]
+      trader:
+        state: blind
+        needs: Owners of the fab and of every reseller in between
+        held: Customers it cannot audit
+        gaps: [structural, intentional]
+      fab:
+        state: holds
+        needs: Knows its own owners
+        held: Itself
+        gaps: []
+  - key: ann61
+    name: China Announcement 61
+    url: /announcement-61/
+    j: cn
+    info: Rare-earth content share, and end use
+    flows:
+      - dir: down
+        label: The content share travels down with the goods
+      - dir: up
+        label: The end use has to travel up, to the licence application
+    cells:
+      magnet:
+        state: sees
+        needs: Origin and value share of its rare earths
+        held: Itself, from its Chinese supplier
+        gaps: []
+      subsystem:
+        state: blind
+        needs: The content share of each magnet it fits
+        held: The magnet maker, on the Declaration of Compliance
+        gaps: [structural]
+      tool:
+        state: blind
+        needs: Which item 0.1% is measured on; the fab's process node
+        held: No one; the fab
+        gaps: [institutional, structural]
+      trader:
+        state: blind
+        needs: The Declaration from upstream and the end use from downstream. Hong Kong counts as outside China
+        held: Neither; its supplier and its customer
+        gaps: [structural, conflicting]
+      fab:
+        state: holds
+        needs: Its node and layer count, which its suppliers' licences ask for
+        held: Itself
+        gaps: [conflicting]

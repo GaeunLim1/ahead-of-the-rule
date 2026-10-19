@@ -1,7 +1,7 @@
 ---
 layout: default
 title: China Announcement 61
-description: "How China's Announcement 61 reaches data centre hardware and chipmaking: exposure, information, cost and responsibility."
+description: "How China's Announcement 61 reaches the chipmaking equipment supply chain: scope now and after the pause, firm impact, and the information trace."
 lang: en
 nav: ann61
 ---
@@ -9,11 +9,31 @@ nav: ann61
 <section class="cover">
   <div class="wrap">
     <h1 class="cover__title">China Announcement 61</h1>
-    <p class="cover__lede">MOFCOM requires a licence for foreign-made items with 0.1% or more Chinese rare-earth content. Its list names samarium-cobalt magnets, neodymium magnets containing terbium or dysprosium, the parts and modules that contain them, and rare-earth sputtering targets.</p>
-    <p class="asof">As of <time datetime="2026-10-15">15 October 2026</time></p>
+    <p class="cover__lede">MOFCOM requires a licence for foreign-made items with 0.1% or more Chinese rare-earth content. Its list names samarium-cobalt magnets, neodymium magnets containing terbium or dysprosium, the parts and modules that contain them, and rare-earth sputtering targets. In a fab, that means the magnets inside vacuum pumps, wafer robots and linear stages, and the targets used in deposition.</p>
+    <p class="asof">As of <time datetime="2026-10-19">19 October 2026</time></p>
     {% include stage-strip.html case="ann61" %}
     <p class="note">Dependency: China held 91% of magnet rare-earth refining (Nd, Pr, Dy, Tb) and 94% of sintered magnet production in 2024 (IEA).</p>
     {% include timeline-truce.html %}
+  </div>
+</section>
+
+<section class="part" id="scope">
+  <div class="wrap part__grid">
+    <header class="part__head"><span class="part__n">3</span><h2>Scope, now and after the pause</h2></header>
+    <div class="part__body">
+      <p class="finding">The April 2025 controls are not paused. What the pause holds back is the reach beyond China's border.</p>
+      <table class="tbl now-after">
+        <thead><tr><th scope="col">Item</th><th scope="col">In force now</th><th scope="col">When the pause ends</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Elements</th><td data-label="In force now">Sm, Gd, Tb, Dy, Lu, Sc, Y (April 2025)</td><td data-label="When the pause ends">Adds Ho, Er, Tm, Eu, Yb (Ann. 57)</td></tr>
+          <tr><th scope="row">Where it applies</th><td data-label="In force now">Exports from China</td><td data-label="When the pause ends">Also exports of foreign-made items from any country, Hong Kong included (Ann. 61)</td></tr>
+          <tr><th scope="row">What is caught</th><td data-label="In force now">Rare-earth metals, oxides, alloys and some magnets</td><td data-label="When the pause ends">Also parts and modules with listed magnets, and rare-earth targets, at 0.1% of value</td></tr>
+          <tr><th scope="row">Equipment and technology</th><td data-label="In force now"><span class="none">Not in the April 2025 controls</span></td><td data-label="When the pause ends">Rare-earth equipment and materials (Ann. 56); rare-earth technology (Ann. 62)</td></tr>
+          <tr><th scope="row">Users and end uses</th><td data-label="In force now">Standard end-user review</td><td data-label="When the pause ends">Listed users and their 50%-controlled subsidiaries refused in principle; tools and materials for logic at 14 nm or below, or memory at 256 layers or more, reviewed case by case</td></tr>
+        </tbody>
+      </table>
+      <p class="note">Parts 1(a) and 1(b) of Ann. 61 were due to take effect on 1 December 2025. Whether they apply at once when the pause ends, or after a new date, will depend on the notice that ends it.</p>
+    </div>
   </div>
 </section>
 
@@ -25,13 +45,25 @@ nav: ann61
       <table class="tbl">
         <thead><tr><th scope="col">Item</th><th scope="col">Content</th></tr></thead>
         <tbody>
-          <tr><th scope="row">High exposure</th><td data-label="Content">Makers of HDDs, fans and motors using terbium or dysprosium magnets; chipmakers using rare-earth sputtering targets</td></tr>
-          <tr><th scope="row">Information</th><td data-label="Content">The content share is passed down on the Declaration of Compliance, from each supplier to the next recipient</td></tr>
-          <tr><th scope="row">Cost</th><td data-label="Content">A licence for each export of a covered item; switching to magnets without terbium or dysprosium, or from outside China</td></tr>
-          <tr><th scope="row">Allocation</th><td data-label="Content">The exporter applies for the licence. The Declaration does not exempt anyone from due diligence</td></tr>
-          <tr><th scope="row">No contract fixes</th><td data-label="Content">A delayed licence with no alternative supply, because dependency is high</td></tr>
+          <tr><th scope="row">High exposure</th><td data-label="Content">Makers and distributors of vacuum pumps, wafer robots, linear motors and stages using terbium, dysprosium or samarium-cobalt magnets; suppliers of rare-earth sputtering targets</td></tr>
+          <tr><th scope="row">Information</th><td data-label="Content">The content share is passed down on the Declaration of Compliance; the end use, process node and layer count, sits with the fab</td></tr>
+          <tr><th scope="row">Cost</th><td data-label="Content">A licence for each export of a covered item; case-by-case review for leading-edge tools and materials; process information disclosed to MOFCOM</td></tr>
+          <tr><th scope="row">Allocation</th><td data-label="Content">The exporter applies, or has an intermediary agency, chamber of commerce or industry association apply for it. The Declaration does not exempt anyone from due diligence</td></tr>
+          <tr><th scope="row">No contract fixes</th><td data-label="Content">A delayed licence for a spare part stops a tool, and dependency on China for the magnets is high</td></tr>
         </tbody>
       </table>
+    </div>
+  </div>
+</section>
+
+<section class="part" id="trace">
+  <div class="wrap part__grid">
+    <header class="part__head"><span class="part__n">5</span><h2>Information trace</h2></header>
+    <div class="part__body">
+      <p class="finding">The content share comes down with the goods. The end use has to go up to the licence application. The distributor sits between the two and holds neither.</p>
+      {% include trace-table.html rule="ann61" %}
+      <p>Each exporter must hand the next recipient a Declaration of Compliance stating the share of value that controlled Chinese rare earth makes up. The recipient may ask for it. A part with more than 0.1% that "can be used independently" is caught in its own right, but the notice does not say whether that is the pump or the tool the pump goes into.</p>
+      <p>The flow also runs to MOFCOM. A licence application names the end user and the end use, and for leading-edge chipmaking that means the process node or layer count. Ann. 61 also turns intermediaries into a channel: agencies, chambers of commerce and industry associations may apply on an exporter's behalf.</p>
     </div>
   </div>
 </section>
@@ -40,9 +72,10 @@ nav: ann61
   <div class="wrap">
     <h2>Sources</h2>
     <ul>
-      <li>MOFCOM, <a href="https://cset.georgetown.edu/publication/mofcom-notice-2025-61/">Notice 2025 No. 61</a>, Appendix 1 Part 2 and Appendix 2 (CSET translation); <a href="https://www.mofcom.gov.cn/zwgk/zcfb/art/2025/art_b1ec77dd3f0d4762952904df7cdaadec.html">Announcement 70/2025</a>.</li>
-      <li>Rare earths in HDDs and cooling: <a href="https://www.tomshardware.com/tech-industry/china-expands-rare-earth-export-controls">Tom's Hardware</a>, 9 October 2025.</li>
-      <li>Truce extension: <a href="https://rawmaterials.net/rare-earth-export-controls-china-confirms-extension-of-trade-arrangements-with-u-s/">RAWMATERIALS.net</a>; <a href="https://exportcompliancedaily.com/article/2026/09/25/uschina-trade-truce-including-bis-affiliates-rule-extended-2-months-us-says-2609240049">Export Compliance Daily</a>, 25 September 2026.</li>
+      <li>MOFCOM, <a href="https://cset.georgetown.edu/publication/mofcom-notice-2025-61/">Notice 2025 No. 61</a>, articles 1 to 8, Appendix 1 and Appendix 2 (CSET translation); <a href="https://www.mofcom.gov.cn/zwgk/zcfb/art/2025/art_b1ec77dd3f0d4762952904df7cdaadec.html">Announcement 70/2025</a>, pausing Ann. 55 to 58, 61 and 62 until 10 November 2026.</li>
+      <li>April 2025 controls on seven medium and heavy rare earths, still in force: <a href="https://pillsburylaw.com/en/news-and-insights/china-suspends-export-controls-certain-critical-minerals-related-items.html">Pillsbury</a>.</li>
+      <li>Magnets in chipmaking equipment: <a href="https://rareearthexchanges.com/?p=20968">Rare Earth Exchanges</a>, 11 January 2026; <a href="https://www.dextermag.com/semiconductor-motion-solutions-a-comprehensive-guide">Dexter Magnetic Technologies</a>.</li>
+      <li>Truce extension: MOFCOM's summary of the trade consultations, 28 September 2026, as reported by <a href="https://electronicsriskbrief.substack.com/p/chinas-rare-earth-truce-now-ends">Electronics Risk Brief</a>, 12 October 2026; <a href="https://exportcompliancedaily.com/article/2026/09/25/uschina-trade-truce-including-bis-affiliates-rule-extended-2-months-us-says-2609240049">Export Compliance Daily</a>, 25 September 2026. No MOFCOM notice amending Announcement 70 appears in its <a href="https://www.mofcom.gov.cn/zcfb/blgg/gg/2026/index.html">2026 notices</a> as of 19 October 2026.</li>
       <li>Refining and magnet shares: IEA, <a href="https://www.iea.org/reports/rare-earth-elements/executive-summary">Rare Earth Elements</a>, 2026.</li>
     </ul>
   </div>

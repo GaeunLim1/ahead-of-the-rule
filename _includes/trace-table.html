@@ -1,0 +1,18 @@
+{%- comment -%} Stage 5 for one rule, as a table. Pass rule="affiliates" | "ann61". {%- endcomment -%}
+{%- assign t = site.data.trace -%}
+{%- assign r = t.rules | where: "key", include.rule | first -%}
+<table class="tbl trace-tbl j-{{ r.j }}">
+  <caption>What each node needs: {{ r.info | downcase }}</caption>
+  <thead><tr><th scope="col">Node</th><th scope="col">Needs</th><th scope="col">Held by</th><th scope="col">Gap</th></tr></thead>
+  <tbody>
+    {%- for n in t.nodes %}
+    {%- assign c = r.cells[n.key] %}
+    <tr class="row--{{ c.state }}">
+      <th scope="row">{{ n.name }}<span class="state">{% if c.state == 'blind' %}<mark>{{ t.states[c.state] }}</mark>{% else %}{{ t.states[c.state] }}{% endif %}</span></th>
+      <td data-label="Needs">{{ c.needs }}</td>
+      <td data-label="Held by">{% if c.held != "" %}{{ c.held }}{% else %}<span class="none">Not applicable</span>{% endif %}</td>
+      <td data-label="Gap">{% if c.gaps.size > 0 %}<ul class="tags">{% for g in c.gaps %}{% assign gt = t.types | where: "key", g | first %}<li>{{ gt.name }}</li>{% endfor %}</ul>{% else %}<span class="none">None</span>{% endif %}</td>
+    </tr>
+    {%- endfor %}
+  </tbody>
+</table>

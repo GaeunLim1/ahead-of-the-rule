@@ -1,0 +1,52 @@
+{%- comment -%}
+  Stage 5 on the home page: one chain, both rules.
+  Columns are the nodes in _data/trace.yml, upstream on the left.
+  A cell painted in marker is a gap: liable there, but the information sits elsewhere.
+{%- endcomment -%}
+{%- assign t = site.data.trace -%}
+<figure class="trace" aria-labelledby="trace-cap">
+  <div class="trace__grid">
+    <div class="trace__corner" aria-hidden="true"></div>
+    <div class="trace__axis" aria-hidden="true"><span>Upstream</span><span>Downstream</span></div>
+    <div class="trace__corner" aria-hidden="true"></div>
+    {%- for n in t.nodes %}
+    <div class="trace__node{% if n.key == 'trader' %} trace__node--pinch{% endif %}" aria-hidden="true">
+      <span class="trace__n">{{ forloop.index }}</span>
+      <b>{{ n.name }}</b>
+      <small>{{ n.eg }}</small>
+      {%- if n.key == 'trader' %}<em>Asked from both sides</em>{% endif %}
+    </div>
+    {%- endfor %}
+    {%- for r in t.rules %}
+    <div class="trace__rule j-{{ r.j }}">
+      <a href="{{ r.url | relative_url }}">{{ r.name }}</a>
+      <small>Needs: {{ r.info }}</small>
+    </div>
+    <div class="trace__flows j-{{ r.j }}">
+      {%- for f in r.flows %}
+      <p class="flow flow--{{ f.dir }}"><span>{{ f.label }}</span></p>
+      {%- endfor %}
+    </div>
+    {%- for n in t.nodes %}
+    {%- assign c = r.cells[n.key] %}
+    <div class="cell cell--{{ c.state }}{% if n.key == 'trader' %} cell--pinch{% endif %}">
+      <span class="cell__node">{{ n.name }}</span>
+      <span class="cell__state">{{ t.states[c.state] }}</span>
+      <p>{{ c.needs }}</p>
+      {%- if c.gaps.size > 0 %}
+      <ul class="tags" aria-label="Gap type">
+        {%- for g in c.gaps %}{% assign gt = t.types | where: "key", g | first %}<li>{{ gt.name }}</li>{% endfor %}
+      </ul>
+      {%- endif %}
+    </div>
+    {%- endfor %}
+    {%- endfor %}
+  </div>
+  <p class="trace__key" aria-hidden="true">
+    <span><i class="k k--blind"></i>{{ t.states.blind }}: the gap</span>
+    <span><i class="k k--sees"></i>{{ t.states.sees }}</span>
+    <span><i class="k k--holds"></i>{{ t.states.holds }}</span>
+    <span><i class="k k--out"></i>{{ t.states.out }}</span>
+  </p>
+  <figcaption id="trace-cap" class="sr">Under both rules, every node between the magnet maker and the fab is liable for information held by another firm. The distributor holds the least of it and is asked for it from both sides.</figcaption>
+</figure>

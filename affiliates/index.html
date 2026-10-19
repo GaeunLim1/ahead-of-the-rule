@@ -1,7 +1,7 @@
 ---
 layout: default
 title: US Affiliates Rule
-description: "How the US Affiliates Rule reaches data centre suppliers: exposure, information, cost and responsibility."
+description: "How the US Affiliates Rule reaches the chipmaking equipment supply chain: scope, firm impact, the information trace, and what the Entity List already shows."
 lang: en
 nav: affiliates
 ---
@@ -9,10 +9,38 @@ nav: affiliates
 <section class="cover">
   <div class="wrap">
     <h1 class="cover__title">US Affiliates Rule</h1>
-    <p class="cover__lede">BIS extends Entity List and MEU restrictions to companies 50% or more owned by listed parties. In a data centre, it matters less for the chips than for everything around them: advanced chips already need a licence for firms headquartered in China.</p>
-    <p class="asof">As of <time datetime="2026-10-15">15 October 2026</time></p>
+    <p class="cover__lede">BIS extends Entity List and MEU restrictions to companies 50% or more owned by listed parties, directly or indirectly, alone or together. Leading-edge tools for China already need a licence. The rule matters most for spares, consumables and service, and for the companies a listed chipmaker owns abroad.</p>
+    <p class="asof">As of <time datetime="2026-10-19">19 October 2026</time></p>
     {% include stage-strip.html case="affiliates" %}
     {% include timeline-truce.html %}
+  </div>
+</section>
+
+<section class="part" id="scope">
+  <div class="wrap part__grid">
+    <header class="part__head"><span class="part__n">3</span><h2>Scope</h2></header>
+    <div class="part__body">
+      <p class="finding">The list stays the same length. What it covers does not.</p>
+      <p>Until now BIS had to name each affiliate it wanted to restrict. Under the rule, an unnamed company is caught by its owners. Holdings are added up across listed owners, and they pass down a chain through any company that is itself caught. The strictest owner's terms apply.</p>
+      <table class="tbl">
+        <caption>BIS's own example</caption>
+        <thead><tr><th scope="col">Company</th><th scope="col">Owned by</th><th scope="col">Result</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">A, B</th><td data-label="Owned by">Listed on the Entity List</td><td data-label="Result">Restricted by name</td></tr>
+          <tr><th scope="row">C</th><td data-label="Owned by">A 35%, B 15%</td><td data-label="Result">Caught: 50% together. A's stricter terms apply</td></tr>
+          <tr><th scope="row">D</th><td data-label="Owned by">C 50%</td><td data-label="Result">Caught through C, though no listed party owns it directly</td></tr>
+        </tbody>
+      </table>
+      <table class="tbl">
+        <caption>Not caught by the rule</caption>
+        <tbody>
+          <tr><th scope="row">Below 50% in the middle</th><td data-label="Not caught">On the rule's wording, a stake held through a company that is not itself caught does not pass down</td></tr>
+          <tr><th scope="row">Control without ownership</th><td data-label="Not caught">Board control or a 49% stake with management rights</td></tr>
+          <tr><th scope="row">Address listings</th><td data-label="Not caught">Affiliates of companies at an address on the list, unless those companies are named</td></tr>
+        </tbody>
+      </table>
+      <p class="note">When the ownership share cannot be found, the strictest terms of the listed owner apply. Not knowing is treated as the worst case.</p>
+    </div>
   </div>
 </section>
 
@@ -20,17 +48,51 @@ nav: affiliates
   <div class="wrap part__grid">
     <header class="part__head"><span class="part__n">4</span><h2>Firm impact</h2></header>
     <div class="part__body">
-      <p class="finding">A data centre's owner, not its name, decides whether its suppliers need a licence.</p>
+      <p class="finding">A fab's owner, not its process node, decides whether its suppliers need a licence.</p>
       <table class="tbl">
         <thead><tr><th scope="col">Item</th><th scope="col">Content</th></tr></thead>
         <tbody>
-          <tr><th scope="row">High exposure</th><td data-label="Content">Suppliers of servers, network equipment and facility parts to data centres 50% or more owned by listed parties</td></tr>
-          <tr><th scope="row">Information</th><td data-label="Content">The data centre's ownership chain, held by the customer</td></tr>
-          <tr><th scope="row">Cost</th><td data-label="Content">Ownership tracing, built once; licences when ownership is unclear; deals deferred until 10 Jan 2027</td></tr>
-          <tr><th scope="row">Allocation</th><td data-label="Content">The exporter is liable. Ownership disclosure and change-notice clauses move the information, not the liability</td></tr>
-          <tr><th scope="row">No contract fixes</th><td data-label="Content">A subsidiary in China that cuts off a listed customer can breach China's Anti-Foreign Sanctions Law, State Council Decree 835 and a blocking order</td></tr>
+          <tr><th scope="row">High exposure</th><td data-label="Content">Suppliers and distributors of spares, consumables and service to fabs 50% or more owned by listed parties, mature-node fabs included; anyone dealing with a listed chipmaker's subsidiaries abroad</td></tr>
+          <tr><th scope="row">Information</th><td data-label="Content">The fab's ownership chain, held by the customer and its local agents</td></tr>
+          <tr><th scope="row">Cost</th><td data-label="Content">Ownership tracing at every node; licences when ownership is unclear; service contracts on installed tools put on hold</td></tr>
+          <tr><th scope="row">Allocation</th><td data-label="Content">Exporters, reexporters and transferors carry strict liability. Ownership disclosure and change-notice clauses move the information, not the liability</td></tr>
+          <tr><th scope="row">No contract fixes</th><td data-label="Content">A subsidiary in China that stops servicing a listed fab can breach China's Anti-Foreign Sanctions Law, State Council Decree 835 and a blocking order</td></tr>
         </tbody>
       </table>
+    </div>
+  </div>
+</section>
+
+<section class="part" id="trace">
+  <div class="wrap part__grid">
+    <header class="part__head"><span class="part__n">5</span><h2>Information trace</h2></header>
+    <div class="part__body">
+      <p class="finding">Ownership has to travel up the chain, from the fab to whoever ships. The node that ships most and knows least is the distributor.</p>
+      {% include trace-table.html rule="affiliates" %}
+      <p>BIS says the rule creates "an affirmative duty to determine the ownership of other parties to the transaction", and that the Consolidated Screening List "will no longer comprise an exhaustive listing". The search that BIS used to do by naming affiliates now falls on each exporter. It names freight forwarders as parties that may have obligations of their own.</p>
+      <p>The information also flows on to BIS. A licence application under the rule must name the listed owners, give their share and say how it was found, or explain why it could not be.</p>
+    </div>
+  </div>
+</section>
+
+<section class="part" id="list">
+  <div class="wrap part__grid">
+    <header class="part__head"><span class="part__n">6</span><h2>What the Entity List already shows</h2></header>
+    <div class="part__body">
+      <p class="finding">Before the rule, BIS was already listing intermediaries one name at a time.</p>
+      <dl class="facts">
+        <div><dt>~3,320</dt><dd>Entries on the Entity List on 15 October 2026. About 1,090 are under China, and about 290 of those have a Hong Kong address.</dd></div>
+        <div><dt>~160 / ~50</dt><dd>Entries whose names mark them as traders or as logistics firms. Distributors named "Technology Co." are not counted, so this is a floor.</dd></div>
+        <div><dt>18 of 19</dt><dd>Address-only entries that are offices in Hong Kong commercial buildings, several in the same building. BIS calls these addresses a diversion concern, citing "corporate secretarial services companies or logistics companies".</dd></div>
+      </dl>
+      <table class="tbl">
+        <caption>Two cases</caption>
+        <tbody>
+          <tr><th scope="row">A global distributor</th><td data-label="Case">Arrow's Hong Kong and China units were listed in October 2025 over US-origin parts found in drones used by Iran's proxies. The Hong Kong entry's addresses include units in two Kwai Chung cargo and logistics centres. Arrow China Electronics Trading was removed weeks later, reportedly after Arrow set out its affiliate structure and compliance measures. The Hong Kong entry was still on the list on 15 October 2026.</td></tr>
+          <tr><th scope="row">Subsidiaries in Korea</th><td data-label="Case">Two of the five Korean entries are subsidiaries of Chinese chip firms: ACM Research Korea, of the cleaning-tool maker, and Empyrean Korea, of the chip design software maker. Under the rule, their own majority-owned companies would be caught without being named.</td></tr>
+        </tbody>
+      </table>
+      <p class="note">Counts are by keyword on entry names, from the eCFR text of Supplement No. 4 to Part 744. The list gives no reasons; those are in the Federal Register notice cited for each entry.</p>
     </div>
   </div>
 </section>
@@ -39,9 +101,11 @@ nav: affiliates
   <div class="wrap">
     <h2>Sources</h2>
     <ul>
-      <li>BIS, <a href="https://www.federalregister.gov/d/2025-19001">Expansion of End-User Controls To Cover Affiliates of Certain Listed Entities</a>, 90 FR 47201; <a href="https://www.federalregister.gov/documents/2025/11/12/2025-19846/one-year-suspension-of-expansion-of-end-user-controls-for-affiliates-of-certain-listed-entities">one-year suspension</a>, 90 FR 50857.</li>
-      <li>Truce extension: <a href="https://natlawreview.com/article/bis-affiliates-rule-suspension-extended-uncertainty-remains">National Law Review</a>, 2 October 2026; <a href="https://exportcompliancedaily.com/article/2026/09/25/uschina-trade-truce-including-bis-affiliates-rule-extended-2-months-us-says-2609240049">Export Compliance Daily</a>, 25 September 2026.</li>
-      <li>Data centres and the D:5 headquarters licence requirement: <a href="https://www.gtlaw.com/en/insights/2026/9/navigating-gpu-export-controls-and-ai-use-restrictions-in-data-center-operations">Greenberg Traurig</a>, 22 September 2026.</li>
+      <li>BIS, <a href="https://www.federalregister.gov/d/2025-19001">Expansion of End-User Controls To Cover Affiliates of Certain Listed Entities</a>, 90 FR 47201, including application example 1; <a href="https://www.federalregister.gov/documents/2025/11/12/2025-19846/one-year-suspension-of-expansion-of-end-user-controls-for-affiliates-of-certain-listed-entities">one-year suspension</a>, 90 FR 50857.</li>
+      <li>Entity List: <a href="https://www.ecfr.gov/current/title-15/subtitle-B/chapter-VII/subchapter-C/part-744/appendix-Supplement%20No.%204%20to%20Part%20744">Supplement No. 4 to Part 744</a>, eCFR, up to date as of 15 October 2026.</li>
+      <li>Truce extension: <a href="https://www.millercanfield.com/resources-BIS-Affiliates-Rule-Suspension-Extended.html">Miller Canfield</a>, October 2026; <a href="https://exportcompliancedaily.com/article/2026/09/25/uschina-trade-truce-including-bis-affiliates-rule-extended-2-months-us-says-2609240049">Export Compliance Daily</a>, 25 September 2026; <a href="https://www.mondaq.com/unitedstates/export-controls-trade-investment-sanctions/1854664/us-china-trade-truce-extended-two-months-bis-affiliates-rule-suspension-follows">Mondaq</a>, 14 October 2026. No Federal Register notice changing the date had been published as of 19 October 2026.</li>
+      <li>Arrow: <a href="https://www.internationaltradeinsights.com/2025/10/bis-adds-29-entities-and-addresses-in-china-turkey-and-the-uae-to-entity-list/">International Trade Insights</a>, October 2025; <a href="https://www.roic.ai/news/us-removes-arrow-china-electronics-trading-from-entity-list-11-10-2025">removal report</a>, 10 November 2025.</li>
+      <li>Existing US controls on chipmaking in China: <a href="https://www.ecfr.gov/current/title-15/subtitle-B/chapter-VII/subchapter-C/part-744/section-744.23">15 CFR 744.23</a>.</li>
       <li>China's State Council Decrees 834 and 835 and the first blocking order: <a href="https://www.pressian.com/pages/articles/2026050410252142354">Pressian</a>, 4 May 2026.</li>
     </ul>
   </div>

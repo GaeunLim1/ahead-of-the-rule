@@ -1,25 +1,38 @@
 ---
 layout: default
-description: "How three export controls reach the data centre supply chain: the US Affiliates Rule, China's Announcement 61 and the EU's 2026 dual-use update. Export control analysis by Gaeun Lim."
+description: "How the US Affiliates Rule and China's Announcement 61 reach the chipmaking equipment supply chain, and where each rule makes a firm liable for information another firm holds. Export control analysis by Gaeun Lim."
 permalink: /
 ---
 
 <section class="home">
   <div class="wrap">
-    <h1 class="home__title">Three export controls and the data centre supply chain</h1>
-    <p class="home__by">Export control analysis by Gaeun Lim. As of <time datetime="2026-10-15">15 October 2026</time>.</p>
+    <h1 class="home__title">Two export controls and the chipmaking equipment supply chain</h1>
+    <p class="home__by">Export control analysis by Gaeun Lim. As of <time datetime="2026-10-19">19 October 2026</time>.</p>
+
+    <div class="thesis">
+      <p class="thesis__line">Information moves. Liability stays.</p>
+      <p>Both rules make a firm answer for something it cannot see by itself: who owns its customer, or how much Chinese rare earth is inside what it sells. That information sits with another firm in the chain. This site traces where it sits, who is liable for it, and where the two come apart. Where they come apart is <mark>the gap</mark>, and the cost of closing it is pushed onto whoever has the least leverage.</p>
+    </div>
 
     <h2 class="home__h2">Where each rule reaches</h2>
     <table class="tbl map">
-      <thead><tr><th scope="col">Data centre supply chain</th><th scope="col">Rule</th><th scope="col">How it is caught</th></tr></thead>
+      <thead><tr><th scope="col">Chipmaking equipment supply chain</th><th scope="col">Rule</th><th scope="col">How it is caught</th></tr></thead>
       <tbody>
-        <tr><th scope="row">Compute: equipment and parts other than advanced chips</th><td class="j-us" data-label="Rule"><a href="{{ '/affiliates/' | relative_url }}">US Affiliates Rule</a></td><td data-label="Caught by">Ownership</td></tr>
-        <tr><th scope="row">Compute: data centre ICs and servers</th><td class="j-eu" data-label="Rule"><a href="{{ '/eu-2026-update/' | relative_url }}">EU 3A501.a.16.b</a></td><td data-label="Caught by">Product movement</td></tr>
-        <tr><th scope="row">Compute: chipmaking (sputtering targets)</th><td class="j-cn" data-label="Rule"><a href="{{ '/announcement-61/' | relative_url }}">China Ann. 61</a></td><td data-label="Caught by">Material content</td></tr>
-        <tr><th scope="row">Facilities: HDDs, cooling fans</th><td class="j-cn" data-label="Rule"><a href="{{ '/announcement-61/' | relative_url }}">China Ann. 61</a></td><td data-label="Caught by">Material content</td></tr>
-        <tr><th scope="row">Power: gas turbines</th><td class="j-eu" data-label="Rule"><a href="{{ '/eu-2026-update/' | relative_url }}">EU 9E503.l</a></td><td data-label="Caught by">Technology transfer</td></tr>
+        <tr><th scope="row">Spares, consumables and service for fabs 50% or more owned by listed parties, including mature-node fabs</th><td class="j-us" data-label="Rule"><a href="{{ '/affiliates/' | relative_url }}">US Affiliates Rule</a></td><td data-label="Caught by">Ownership</td></tr>
+        <tr><th scope="row">Subsidiaries abroad of listed Chinese chipmakers and toolmakers, including in Korea</th><td class="j-us" data-label="Rule"><a href="{{ '/affiliates/' | relative_url }}">US Affiliates Rule</a></td><td data-label="Caught by">Ownership</td></tr>
+        <tr><th scope="row">Vacuum pumps, wafer robots, linear motors and stages with Tb, Dy or SmCo magnets</th><td class="j-cn" data-label="Rule"><a href="{{ '/announcement-61/' | relative_url }}">China Ann. 61</a></td><td data-label="Caught by">Material content</td></tr>
+        <tr><th scope="row">Rare-earth sputtering targets for deposition</th><td class="j-cn" data-label="Rule"><a href="{{ '/announcement-61/' | relative_url }}">China Ann. 61</a></td><td data-label="Caught by">Material content</td></tr>
+        <tr><th scope="row">Tools and materials for logic at 14 nm or below, or memory at 256 layers or more</th><td class="j-cn" data-label="Rule"><a href="{{ '/announcement-61/' | relative_url }}">China Ann. 61</a></td><td data-label="Caught by">End use, case by case</td></tr>
       </tbody>
     </table>
+
+    <h2 class="home__h2">Where the information sits</h2>
+    <p class="home__sub">One chain, two rules. Read each row from left to right; a painted cell is liable for information it does not hold.</p>
+    {% include trace-chain.html %}
+    <div class="meet">
+      <h3>Where the two rules meet</h3>
+      <p>A distributor buys a vacuum pump with Chinese terbium magnets and resells it to a fab that two listed parties together own 50% or more of. One shipment needs a MOFCOM licence and a BIS licence. For the first, the content share comes down from the pump maker and the end use has to go up from the fab. For the second, the fab's ownership has to go up to the distributor. The distributor holds none of it.</p>
+    </div>
 
     <h2 class="home__h2">Stages 1 to 3</h2>
     <table class="tbl l1-table">
@@ -44,12 +57,31 @@ permalink: /
     </table>
     <dl class="defs">
       <div><dt>Time gap</dt><dd>The extension is announced but not yet in a published notice.</dd></div>
+      <div><dt>Information gap</dt><dd>A firm is liable for information that another firm holds.</dd></div>
       <div><dt>Supply disruption</dt><dd>The controlled material has few sources outside the controlling country.</dd></div>
-      <div><dt>Space gap</dt><dd>One jurisdiction controls an item that others do not, so the control stops at its border.</dd></div>
-      <div><dt>Divergent classification</dt><dd>The same item is controlled in one jurisdiction and not in another.</dd></div>
     </dl>
 
-    <h2 class="home__h2">Stage 4: firm impact, by rule</h2>
+    <h2 class="home__h2">Four kinds of information gap</h2>
+    <dl class="defs defs--types">
+      {%- for g in site.data.trace.types %}
+      <div><dt><span class="tag">{{ g.name }}</span></dt><dd>{{ g.def }}</dd></div>
+      {%- endfor %}
+    </dl>
+
+    <h2 class="home__h2">Method</h2>
+    <ol class="chain chain--5">
+      <li><span><b>Industry link</b><small>Where the rule touches the chain</small></span></li>
+      <li><span><b>Mechanism</b><small>What it is caught by</small></span></li>
+      <li><span><b>Scope</b><small>Who and what is in</small></span></li>
+      <li><span><b>Firm impact</b><small>Exposure, cost, allocation</small></span></li>
+      <li><span><b>Information trace</b><small>Who holds it, who is liable</small></span></li>
+    </ol>
+    <div class="method">
+      <p>The unit is a node in the chain. At each node the same five questions apply: is it caught, what information does it need, who holds that information, who is liable, and what is left that no contract can fix. A node that is liable for information it does not hold is marked as a gap and given a type.</p>
+      <p class="note">This maps where the gaps are, not how large they are. Measures such as the share of intermediaries on the Entity List, the number of tiers in a bill of materials, or the share of magnets sourced from China can be added later. Risks that are not about information, such as having no other supplier, stay in the last row of each firm impact table.</p>
+    </div>
+
+    <h2 class="home__h2">Stages 3 to 5, by rule</h2>
     <ul class="home__list">
       {%- for c in site.data.stages.cases %}
       <li><a href="{{ c.url | relative_url }}">{{ c.name }}</a></li>
